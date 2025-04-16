@@ -8,6 +8,11 @@ body {
     padding: 1em; /* add space inside the body */
     nav {
       display: flex;/*lay out the children of nav for flexible box to display*/
+      margin-bottom:1em;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color:#82ABA3 oklch; /*subtle bottom border */
+  
     }
     
     nav a{
@@ -15,11 +20,13 @@ body {
       text-align:center;/* center the text inside each link */
       padding:0.5em;/* add space inside the body */
       text-decoration: none;/* Remove underline */
+      color:inherit;
+
 
     }
     nav a.current{
-      background-color: #82ABA3 ;
-      font-weight:bold;
+      border-bottom: 0.4em solid oklch(80% 3% 200);
+      padding-bottom:0.1em;
     }
 
   
