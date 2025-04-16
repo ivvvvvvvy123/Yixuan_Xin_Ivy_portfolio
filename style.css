@@ -6,13 +6,22 @@ body {
     max-width: 100ch;/* to avoid text too large size and maintain its proportion */
     margin-inline: auto;/* center the body horizontally */
     padding: 1em; /* add space inside the body */
-    #education em{
-      color:purple;
+    nav {
+      display: flex;/*lay out the children of nav for flexible box to display*/
+    }
+    
+    nav a{
+      flex:1;/* each <a> equal width */
+      text-align:center;/* center the text inside each link */
+      padding:0.5em;/* add space inside the body */
+      text-decoration: none;/* Remove underline */
+
+    }
+    nav a.current{
+      background-color: #82ABA3 ;
       font-weight:bold;
     }
-    em{
-      color:gray;
-      font-style: italic;
-    }
+
+  
 
   }
