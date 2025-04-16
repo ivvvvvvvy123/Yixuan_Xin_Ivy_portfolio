@@ -3,25 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact</title>
 </head>
 <body>
-    <h1>Contact</h1>
+    <h1>Contact Me</h1>
     <p>You can reach me via email or Github. </p>
     <form action="mailto:yixin@ucsd.edu" method="POST" enctype="text/plain">
-        <label>Email:
-            <input type="'email" name="'email" value="">
-        </label>
+        <label for="email">Email:</label>
+        <input id="email" type="email" name="email" required/>
 
-        <label>Subject:
-            <input name="subject" required>
-        </label>
+        <label for="subject">Subject:</label>
+        <input id="subject" name="subject" required/>
 
-        <label>Body:
-            <textarea name="body" rows="5" cols="40" required>Hello!</textarea>
-        </label>
-
-        <button>Submit</button>
+        <label for="body">Body:</label>
+        <textarea id="body" name="body" rows="5" cols="40" required>Hello!</textarea>
+        
+        <button type="submit">Submit</button>
     </form>
 </body>
 </html>

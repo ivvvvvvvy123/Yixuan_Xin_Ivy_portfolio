@@ -44,13 +44,47 @@ button{
 label{
   display: block;/*making every element take a full line and stack vertically*/
 }
+/*typography*/
+input,
+textarea,
+button{
+  font:inherit;
+}
+/*top-down*/
+input,
+textarea,
+button,
+label{
+  display:block;
+}
 
 input,
 textarea,
 button{
   width:100%;
-  box-sizing:border-box;/*padding and borders are included in total width;*/
+  box-sizing: border-box;
 }
 label{
-  margin-block: 0.5em;
+  margin-block:0.5em;
+}
+
+/*visual style*/
+input,
+textarea{
+  padding: 0.5em;
+  border:1px solid #ccc;
+  border-radius: 0.25em;
+}
+
+button{
+  padding: 0.75em 1.5em;
+  background-color: var(--color-accent);
+  color:white;
+  border:none;
+  border-radius: 0.25em;
+  cursor:pointer;
+  margin-top: 1em;
+}
+button:hover{
+  background-color: oklch(60% 40% 30);
 }
