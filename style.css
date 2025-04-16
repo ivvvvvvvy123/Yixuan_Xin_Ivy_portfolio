@@ -6,4 +6,9 @@ body {
     max-width: 100ch;/* to avoid text too large size and maintain its proportion */
     margin-inline: auto;/* center the body horizontally */
     padding: 1em; /* add space inside the body */
+    #education em{
+      color:purple;
+      font-weight:bold;
+    }
+    
   }
