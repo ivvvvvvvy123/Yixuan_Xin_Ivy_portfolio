@@ -10,5 +10,9 @@ body {
       color:purple;
       font-weight:bold;
     }
-    
+    em{
+      color:gray;
+      font-style: italic;
+    }
+
   }
