@@ -36,3 +36,21 @@ nav a.current {
 nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
 }
+input, 
+textarea,
+button{
+  font: inherit;
+}
+label{
+  display: block;/*making every element take a full line and stack vertically*/
+}
+
+input,
+textarea,
+button{
+  width:100%;
+  box-sizing:border-box;/*padding and borders are included in total width;*/
+}
+label{
+  margin-block: 0.5em;
+}
