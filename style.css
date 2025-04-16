@@ -3,4 +3,7 @@ body {
          and use the OS’s UI font as the website font
        */
     font: 100%/1.5 system-ui;
+    max-width: 100ch;/* to avoid text too large size and maintain its proportion */
+    margin-inline: auto;/* center the body horizontally */
+    padding: 1em; /* add space inside the body */
   }
