@@ -1,6 +1,10 @@
-:root{
+/* :root{
   --color-accent:#EC8F3F;
   accent-color:var(--color-accent);
+} */
+:root {
+  --color-accent: oklch(65% 50% 0); /* You can change this! */
+  accent-color: var(--color-accent); /* Inherits to supported elements */
 }
 
 body {
