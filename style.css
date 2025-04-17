@@ -54,8 +54,8 @@ form{
   max-width: 40rem;
 }
 label{
-  display: grid;
-  grid-template-columns: subgrid;
+  display: contents;
+  /* grid-template-columns: subgrid; */
   grid-column: 1 / -1;
 }
 
