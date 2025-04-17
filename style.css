@@ -38,25 +38,36 @@ nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
 }
 
-/*match form text with the rest of the site so it's not time news roman*/
-input, 
-textarea,
-button{
+form {
+  display: grid;
+  grid-template-columns: auto 1fr; /* label width auto, input takes rest */
+  gap: 1em;
+  max-width: 40rem;
+}
+
+label {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1; /* span entire row of form’s grid */
+}
+
+button {
+  grid-column: 1 / -1;
+  padding: 0.5em 1em;
+  background-color: #ccc;  
+  border: none;
+  border-radius: 0.4em;
+  font: inherit;
+}
+
+input,
+textarea {
   font: inherit;
   padding: 0.5em;
   border: 1px solid oklch(80% 3% 200);
   border-radius: 5px;
-}
-form{
-  display:grid;
-  grid-template-columns: auto 1fr;/*auto:left col as wide as content; 1fr:right col=input fills remaining space*/
-  gap:1em;/*spacing beetween rows and col*/
-  max-width: 40rem;
-}
-label{
-  display: contents;
-  /* grid-template-columns: subgrid; */
-  grid-column: 1 / -1;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 
