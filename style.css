@@ -40,34 +40,26 @@ nav a:hover {
 
 form {
   display: grid;
-  grid-template-columns: auto 1fr; /* label width auto, input takes rest */
-  gap: 1em;
-  max-width: 40rem;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem 1rem;
+  align-items: center;
+  max-width: 600px;
 }
 
 label {
   display: grid;
   grid-template-columns: subgrid;
-  grid-column: 1 / -1; /* span entire row of form’s grid */
-}
-
-button {
-  grid-column: 1 / -1;
-  padding: 0.5em 1em;
-  background-color: #ccc;  
-  border: none;
-  border-radius: 0.4em;
-  font: inherit;
+  grid-column: 1 / -1; /* span full row */
 }
 
 input,
 textarea {
-  font: inherit;
-  padding: 0.5em;
-  border: 1px solid oklch(80% 3% 200);
-  border-radius: 5px;
   width: 100%;
-  box-sizing: border-box;
+}
+
+button {
+  grid-column: 1 / -1;
+  justify-self: start;
 }
 
 
