@@ -44,18 +44,19 @@ textarea,
 button{
   font: inherit;
 }
+form{
+  display:grid;
+  grid-template-columns: auto 1fr;/*auto:left col as wide as content; 1fr:right col=input fills remaining space*/
+  gap:1em;/*spacing beetween rows and col*/
+  max-width: 40rem;
+  margin-inline:auto; /*center the form*/
+}
 label{
-  display: block;/*making every element take a full line and stack vertically*/
-  margin-block:0.5em;/*each label with space abvoe and below*/
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
 }
-/*style input and textarea fields*/
-input,
-textarea{
-  display: block;
-  width:100%;
-  box-sizing: border-box;/*so padding and border are included in the width and height*/
-  margin-block:1em;/*spacing before and after*/
-}
+
 
 
 
