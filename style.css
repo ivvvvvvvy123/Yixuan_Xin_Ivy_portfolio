@@ -54,11 +54,14 @@ label {
   grid-template-columns: subgrid;
   grid-column: 1 / -1; /* span full row */
 }
-
+/*4.3*/
 input,
-textarea {
+textarea,
+select {
   grid-column: 2;
   width: 100%;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 button {
@@ -129,4 +132,17 @@ ul {
 
 li {
   margin-bottom: 0.5em;
+}
+
+label.color-scheme{
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+  font-family: inherit;
+  background: Canvas;
+  color:CanvasText;
+  padding:0.5rem 0.75rem; 
+  border-radius: 5px;
+  z-index: 1000;
 }

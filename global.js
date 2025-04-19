@@ -3,6 +3,17 @@ console.log('IT’S ALIVE!');
 function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
+//step 4.2
+document.body.insertAdjacentHTML(
+  'afterbegin',
+  `
+	<label class="color-scheme">
+		Theme:
+		<select>
+			<!-- TODO add <option> elements here -->
+		</select>
+	</label>`,
+);
 //step 2
 // let navLinks =$$("nav a") //2.1 get all nav links
 // //2.2 find the link to the current page
@@ -14,6 +25,7 @@ function $$(selector, context = document) {
 // // or if (currentLink !== undefined)
 // currentLink?.classList.add('current');
 // }
+//body
 
 //step3.1 add navigation menu
 let pages = [
