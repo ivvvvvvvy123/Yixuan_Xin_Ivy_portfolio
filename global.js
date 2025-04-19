@@ -33,11 +33,19 @@ for (let p of pages) {
     let title = p.title;
     // next step: create link and add it to nav
     //nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
-    
+
     //step 3.2 highlighting the current page and opening external link in a new tab
     let a = document.createElement('a');
     a.href = url;
     a.textContent = title;
+    //highlight current page
+    if (a.host === location.host && a.pathname === location.pathname) {
+      a.classList.add('current');
+    }
+    //external links in a new tab
+    if (a.host !== location.host) {
+      a.target = '_blank';
+    }
     nav.append(a);
 }
 const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
