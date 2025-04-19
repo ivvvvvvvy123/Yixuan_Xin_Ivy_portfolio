@@ -19,9 +19,21 @@ document.body.insertAdjacentHTML(
 
 
 let select = document.querySelector('#color-scheme-select');
+//step 4.5 defined a function to avoid releating the code that sets the color scheme twice
+function setColorScheme(scheme){
+  document.documentElement.style.setProperty('color-scheme',scheme);
+  select.value=scheme;
+}
+if("colorScheme" in localStorage){
+  setColorScheme(localStorage.colorScheme);
+  
+}
 select.addEventListener('input', function (event) {
-  console.log('color scheme changed to', event.target.value);
-  document.documentElement.style.setProperty('color-scheme', event.target.value);
+  let value=event.target.value;
+  console.log('color scheme changed to', value);
+  localStorage.colorScheme=value;
+  setColorScheme(value);
+  //document.documentElement.style.setProperty('color-scheme', event.target.value);
 });
 
 //step 2
