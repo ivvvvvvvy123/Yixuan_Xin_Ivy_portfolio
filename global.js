@@ -63,31 +63,51 @@ let nav = document.createElement('nav');
 document.body.prepend(nav);
 //going throug a for loop to iterate over the page and add <a> in the <nav>
 const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
-? "http://localhost:5500"                  // Local server
+? "http://localhost:5500"      
 : "https://ivvvvvvvy123.github.io/Yixuan_Xin_Ivy_portfolio";
 for (let p of pages) {
-    let url = p.url; 
-    let title = p.title;
-    // next step: create link and add it to nav
+  let url = p.url;
+  let title = p.title;
 
-    //nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
+  url = !url.startsWith('http') ? BASE_PATH + '/' + url : url;
 
-    //step 3.2 highlighting the current page and opening external link in a new tab
-    let a = document.createElement('a');
-    a.href = url;
-    a.textContent = title;
-    //highlight current page
-    if (a.host === location.host && a.pathname === location.pathname) {
-      a.classList.add('current');
-    }
-    //external links in a new tab
-    if (a.host !== location.host) {
-      a.target = '_blank';
-    }
-    nav.append(a);
+  let a = document.createElement('a');
+  a.href = url;
+  a.textContent = title;
+
+  if (a.host === location.host && a.pathname === location.pathname) {
+    a.classList.add('current');
+  }
+
+  if (a.host !== location.host) {
+    a.target = '_blank';
+  }
+
+  nav.append(a);
 }
+// for (let p of pages) {
+//     let url = p.url; 
+//     let title = p.title;
+//     // next step: create link and add it to nav
+
+//     //nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
+
+//     //step 3.2 highlighting the current page and opening external link in a new tab
+//     let a = document.createElement('a');
+//     a.href = url;
+//     a.textContent = title;
+//     //highlight current page
+//     if (a.host === location.host && a.pathname === location.pathname) {
+//       a.classList.add('current');
+//     }
+//     //external links in a new tab
+//     if (a.host !== location.host) {
+//       a.target = '_blank';
+//     }
+//     nav.append(a);
+// }
 // const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
 // ? "http://localhost:5500"                  // Local server
 // : "https://ivvvvvvvy123.github.io/Yixuan_Xin_Ivy_portfolio";
 //making sure work locally and deployed
-url = !url.startsWith('http') ? BASE_PATH + url : url;
+//url = !url.startsWith('http') ? BASE_PATH + url : url;
