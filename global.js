@@ -17,24 +17,38 @@ document.body.insertAdjacentHTML(
 	</label>`,
 );
 
-
 let select = document.querySelector('#color-scheme-select');
-//step 4.5 defined a function to avoid releating the code that sets the color scheme twice
-function setColorScheme(scheme){
-  document.documentElement.style.setProperty('color-scheme',scheme);
-  select.value=scheme;
+
+function setColorScheme(scheme) {
+  document.documentElement.style.setProperty('color-scheme', scheme);
+  select.value = scheme;
 }
-if("colorScheme" in localStorage){
+
+if ("colorScheme" in localStorage) {
   setColorScheme(localStorage.colorScheme);
-  
 }
 select.addEventListener('input', function (event) {
-  let value=event.target.value;
-  // console.log('color scheme changed to', value);
-  localStorage.colorScheme=value;
-  setColorScheme(value);
-  //document.documentElement.style.setProperty('color-scheme', event.target.value);
+  let value = event.target.value;
+  localStorage.colorScheme = value;       // Save preference
+  setColorScheme(value);                  // Apply it
 });
+// let select = document.querySelector('#color-scheme-select');
+// //step 4.5 defined a function to avoid releating the code that sets the color scheme twice
+// function setColorScheme(scheme){
+//   document.documentElement.style.setProperty('color-scheme',scheme);
+//   select.value=scheme;
+// }
+// if("colorScheme" in localStorage){
+//   setColorScheme(localStorage.colorScheme);
+  
+// }
+// select.addEventListener('input', function (event) {
+//   let value=event.target.value;
+//   // console.log('color scheme changed to', value);
+//   localStorage.colorScheme=value;
+//   setColorScheme(value);
+//   //document.documentElement.style.setProperty('color-scheme', event.target.value);
+// });
 
 //step 2
 // let navLinks =$$("nav a") //2.1 get all nav links
