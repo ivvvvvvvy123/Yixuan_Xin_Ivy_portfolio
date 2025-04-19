@@ -26,10 +26,20 @@ for (let p of pages) {
     let title = p.title;
     // next step: create link and add it to nav
   }
-  nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
+  let a = document.createElement('a');
+  a.href = url;
+  a.textContent = title;
+  nav.append(a);
 
   const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
   ? "/"                  // Local server
   : "/website/";         // GitHub Pages repo name
 
   url = !url.startsWith('http') ? BASE_PATH + url : url;
+  if (a.host === location.host && a.pathname === location.pathname) {
+    a.classList.add('current');
+  }
+  a.classList.toggle(
+    'current',
+    a.host === location.host && a.pathname === location.pathname,
+  );
