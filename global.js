@@ -4,15 +4,16 @@ function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 let navLinks =$$("nav a") //2.1 get all nav links
-
+//2.2 find the link to the current page
 let currentLink = navLinks.find(
     (a) => a.host === location.host && a.pathname === location.pathname,
-  );//2.2 find the link to the current page
+  );
+//2.3 add the current class to the current page link 
 if (currentLink) {
 // or if (currentLink !== undefined)
-currentLink.classList.add('current');
+currentLink?.classList.add('current');
 }
-currentLink?.classList.add('current');//2.3 add the current class to the current page link
+
 let pages = [
     { url: '', title: 'Home' },
     { url: 'projects/', title: 'Projects' },
