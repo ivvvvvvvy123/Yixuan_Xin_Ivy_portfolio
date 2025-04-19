@@ -24,10 +24,6 @@ let pages = [
     { url: 'https://github.com/ivvvvvvvy123', title: 'GitHub' },
   ];
 
-const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
-? "/"                  // Local server
-: "/Yixuan_Xin_Ivy_portfolio/";         // GitHub Pages repo name
-
   //3.1create a new <nav> element
 let nav = document.createElement('nav');
 document.body.prepend(nav);
@@ -38,10 +34,16 @@ for (let p of pages) {
     // next step: create link and add it to nav
     nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
 }
-//     url = !url.startsWith('http') ? BASE_PATH + url : url;
-//     let a = document.createElement('a');
-//     a.href = url;
-//     a.textContent = title;
+const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
+? "http://localhost:5500"                  // Local server
+: "https://ivvvvvvvy123.github.io/Yixuan_Xin_Ivy_portfolio";
+//making sure work locally and deployed
+url = !url.startsWith('http') ? BASE_PATH + url : url;
+
+
+// let a = document.createElement('a');
+// a.href = url;
+// a.textContent = title;
 
 //     a.classList.toggle(
 //         'current',
