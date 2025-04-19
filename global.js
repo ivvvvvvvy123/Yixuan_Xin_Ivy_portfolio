@@ -53,16 +53,3 @@ const BASE_PATH = (location.hostname === "localhost" || location.hostname === "1
 : "https://ivvvvvvvy123.github.io/Yixuan_Xin_Ivy_portfolio";
 //making sure work locally and deployed
 url = !url.startsWith('http') ? BASE_PATH + url : url;
-
-
-// let a = document.createElement('a');
-// a.href = url;
-// a.textContent = title;
-
-//     a.classList.toggle(
-//         'current',
-//         a.host === location.host && a.pathname === location.pathname,
-//     );
-//     a.toggleAttribute('target', a.host !== location.host);
-//     nav.append(a);
-// }

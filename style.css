@@ -1,3 +1,6 @@
+html{
+  color-scheme: light dark;
+}
 :root{
   --color-accent:#EC8F3F;
   accent-color:var(--color-accent);
