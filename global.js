@@ -51,9 +51,10 @@ let nav = document.createElement('nav');
 document.body.prepend(nav);
 //going throug a for loop to iterate over the page and add <a> in the <nav>
 for (let p of pages) {
-    let url = p.url;
+    let url = p.url; 
     let title = p.title;
     // next step: create link and add it to nav
+    url = !url.startsWith('http') ? BASE_PATH + url : url;
     //nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
 
     //step 3.2 highlighting the current page and opening external link in a new tab
@@ -74,4 +75,4 @@ const BASE_PATH = (location.hostname === "localhost" || location.hostname === "1
 ? "http://localhost:5500"                  // Local server
 : "https://ivvvvvvvy123.github.io/Yixuan_Xin_Ivy_portfolio";
 //making sure work locally and deployed
-url = !url.startsWith('http') ? BASE_PATH + url : url;
+
