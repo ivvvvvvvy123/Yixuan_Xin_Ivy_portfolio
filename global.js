@@ -62,6 +62,9 @@ let pages = [
 let nav = document.createElement('nav');
 document.body.prepend(nav);
 //going throug a for loop to iterate over the page and add <a> in the <nav>
+const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
+? "http://localhost:5500"                  // Local server
+: "https://ivvvvvvvy123.github.io/Yixuan_Xin_Ivy_portfolio";
 for (let p of pages) {
     let url = p.url; 
     let title = p.title;
@@ -83,8 +86,8 @@ for (let p of pages) {
     }
     nav.append(a);
 }
-const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
-? "http://localhost:5500"                  // Local server
-: "https://ivvvvvvvy123.github.io/Yixuan_Xin_Ivy_portfolio";
+// const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
+// ? "http://localhost:5500"                  // Local server
+// : "https://ivvvvvvvy123.github.io/Yixuan_Xin_Ivy_portfolio";
 //making sure work locally and deployed
 url = !url.startsWith('http') ? BASE_PATH + url : url;
