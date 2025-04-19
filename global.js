@@ -54,7 +54,7 @@ for (let p of pages) {
     let url = p.url; 
     let title = p.title;
     // next step: create link and add it to nav
-    url = !url.startsWith('http') ? BASE_PATH + '/' + url : url;
+    url = !url.startsWith('http') ? BASE_PATH + url : url;
 
     //nav.insertAdjacentHTML('beforeend', `<a href="${url}">${title}</a>`);
 
@@ -76,4 +76,4 @@ const BASE_PATH = (location.hostname === "localhost" || location.hostname === "1
 ? "http://localhost:5500"                  // Local server
 : "https://ivvvvvvvy123.github.io/Yixuan_Xin_Ivy_portfolio";
 //making sure work locally and deployed
-
+url = !url.startsWith('http') ? BASE_PATH + url : url;
