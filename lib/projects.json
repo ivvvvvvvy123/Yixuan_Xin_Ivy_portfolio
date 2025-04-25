@@ -1,62 +1,41 @@
 [
     {
-        "title": "Lorem ipsum dolor sit.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio quaerat beatae similique nemo fuga suscipit laboriosam corporis modi cum placeat, dolor explicabo, voluptatum expedita rerum. In repellendus tempore iusto provident!"
+      "title": "Sleep-Gut Microbiome Analysis",
+      "date": "Jul. 2024 - Present",
+      "place": "Knight Lab, UC San Diego",
+      "alt": "Sleep and gut microbiome",
+      "description": "Explored the relationship between sleep quality, psychological disorders, and the gut microbiome using QIIME, RPCA, Qurro, and random forest models. Built pipelines with Birdman and Qadabra for robust ML analysis."
     },
     {
-        "title": "Et dolorem recusandae ducimus!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Sed, dignissimos provident. Dicta maiores esse ut suscipit! Eius aliquam quam aspernatur doloremque tempore non excepturi cum in, nostrum quaerat cupiditate labore, cumque, vero inventore molestiae itaque aut. Molestiae, sint?"
+      "title": "Recipe Time Estimation",
+      "date": "Dec. 2024",
+      "place": "UC San Diego",
+      "alt": "Recipe model",
+      "description": "Performed hypothesis testing and built a decision tree model to predict recipe cooking time. Focused on model interpretability and fairness metrics.",
+      "link": "https://github.com/ivvvvvvvy123/recipe_satisfaction"
     },
     {
-        "title": "Nulla ipsum eveniet officiis?",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Nisi ipsum nam illo omnis! Labore, laborum reprehenderit vitae, asperiores iste animi ipsam deserunt a, quae culpa sit quaerat. Cupiditate deleniti eligendi fugiat vero reiciendis a libero placeat! Quas, laboriosam?"
+      "title": "Blue Dot Project",
+      "date": "2024",
+      "place": "Independent Research",
+      "alt": "Rumination and LCNE",
+      "description": "Summarized neurobiological models of rumination and LC-NE system. Conducted EDA and analyzed Neuro Turing machine outputs.",
+      "link": "https://github.com/KevinBian107/Blue-Dot-Project"
     },
     {
-        "title": "Animi ab quae quas.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Repellendus debitis, dolores ex qui molestiae cum, eveniet odio nemo quo suscipit officiis id commodi error voluptatem sed minima incidunt, explicabo iure ea excepturi? Ab quo quisquam esse aperiam id?"
+      "title": "Simpsons PCA Face Reconstruction",
+      "date": "2024",
+      "place": "UC San Diego",
+      "alt": "PCA reconstruction",
+      "description": "Applied PCA for feature extraction and image reconstruction using The Simpsons dataset. Presented results via slides and an edited video.",
+      "link": "https://github.com/mmzhang7/The-Simpsons-PCA-Reconstruction"
     },
     {
-        "title": "Maiores, eveniet! Dolorem, consectetur.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Facere cumque quae quasi alias expedita suscipit a earum? Illo id earum reprehenderit incidunt quae inventore quam cum fugit recusandae? Necessitatibus, nemo temporibus? Qui excepturi consequuntur alias, repellat eum molestias?"
-    },
-    {
-        "title": "Quaerat nemo accusantium sapiente.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Atque reprehenderit dicta similique obcaecati! Earum, corporis consequatur! Saepe dolorum reprehenderit quod, inventore aliquam iste doloremque, quaerat accusamus dolores ratione quisquam, ex magni animi debitis aperiam consequatur error sed? Suscipit."
-    },
-    {
-        "title": "Aperiam deleniti velit in!",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Eius iure, ad placeat et distinctio eum asperiores eligendi amet quasi blanditiis odio corporis repellendus rerum esse. Asperiores pariatur eligendi praesentium, magni repudiandae sint odit dignissimos in necessitatibus maiores repellat?"
-    },
-    {
-        "title": "Sint aut repellendus cum.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Architecto quas itaque odio reiciendis optio cum? Harum autem enim, error dolore sapiente maiores, magni accusantium rerum possimus in eos aperiam architecto esse. Rerum accusantium, maxime assumenda quos beatae necessitatibus!"
-    },
-    {
-        "title": "In unde facilis asperiores.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Odit velit eum, voluptatem obcaecati consequatur culpa totam consequuntur repudiandae recusandae animi, modi itaque. Eum ipsa maxime voluptates iste minus, libero labore est. Vitae libero sunt aperiam dolorum iste rem."
-    },
-    {
-        "title": "Quod saepe suscipit magni.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Voluptas possimus modi maxime non optio commodi explicabo magnam sed repudiandae quaerat. Consectetur, quo. Quos eaque temporibus nemo fugiat, impedit mollitia assumenda ullam nam soluta magni veritatis ratione nobis quam!"
-    },
-    {
-        "title": "Accusamus odio fugiat ipsa.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Consectetur quisquam voluptate nemo aperiam sed esse repellat tempore repellendus, omnis sit doloremque! Esse amet delectus aut odit ex animi voluptas, iusto aspernatur minima a maiores vero quos optio quibusdam."
-    },
-    {
-        "title": "Aliquid minus sunt voluptas.",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Nemo numquam amet eveniet aut pariatur in! Perspiciatis autem nam saepe. Veritatis ratione facilis quis animi nesciunt dolore nam omnis, officia, assumenda consequatur expedita ad provident exercitationem repudiandae incidunt mollitia!"
+      "title": "HCI Survey & AI Research",
+      "date": "Jun. - Sep. 2023",
+      "place": "Chinese Academy of Sciences",
+      "alt": "AI survey analysis",
+      "description": "Designed surveys on AI trust and performance. Applied ML models and reinforcement learning frameworks for behavioral prediction."
     }
-]
+  ]
+  
