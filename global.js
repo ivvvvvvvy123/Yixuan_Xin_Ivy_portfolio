@@ -125,27 +125,32 @@ export async function fetchJSON(url) {
   }
 }
 
-export function renderProjects(project, containerElement) {
-  // Your code will go here
-  containerElement.innerHTML = ''; //clear exisitng content in the project
+export function renderProjects(project, containerElement, headingLevel = 'h2') {
   const article = document.createElement('article');
+
+  article.innerHTML = `
+    <${headingLevel}>${project.title}</${headingLevel}>
+    <img src="${project.image}" alt="${project.title}">
+    <p>${project.description}</p>
+    <a href="${project.link}">View Project</a>
+  `;
 
   containerElement.appendChild(article);
 }
-export function renderProjects(project, containerElement, headingLevel = 'h2') {
-  // a container that we can put the generated content inside
+// export function renderProjects(project, containerElement, headingLevel = 'h2') {
+//   // a container that we can put the generated content inside
   
-  containerElement.innerHTML='';//empty the old content to aovid repeated
-  const article = document.createElement('article');
-  article.innerHTML = `
-    <h3>${project.title}</h3>
-    <img src="${project.image}" alt="${project.title}">
-    <p>${project.description}</p>
-    `;
-  containerElement.appendChild(article);
-  // for(const project of projects){//begin a loop going through each object
-  //   const heading=document.createElement('h2'); //create a new h2 title element
-  //   heading.textContent=project.title; //put the title of each project  in the h2
-  //   containerElement.appendChild(heading); //put the h2 element in the container so website can see the new title
-  // }
-}
+//   containerElement.innerHTML='';//empty the old content to aovid repeated
+//   const article = document.createElement('article');
+//   article.innerHTML = `
+//     <h3>${project.title}</h3>
+//     <img src="${project.image}" alt="${project.title}">
+//     <p>${project.description}</p>
+//     `;
+//   containerElement.appendChild(article);
+//   // for(const project of projects){//begin a loop going through each object
+//   //   const heading=document.createElement('h2'); //create a new h2 title element
+//   //   heading.textContent=project.title; //put the title of each project  in the h2
+//   //   containerElement.appendChild(heading); //put the h2 element in the container so website can see the new title
+//   // }
+// }
