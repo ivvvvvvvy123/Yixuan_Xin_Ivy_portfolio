@@ -140,6 +140,14 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
 }
 
 export async function fetchGithubData(username) {
-  // Placeholder function for now
-  return {};
+  try {
+    const response = await fetch(`https://api.github.com/users/${username}/events/public`);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch GitHub activity: ${response.statusText}`);
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching GitHub data:', error);
+  }
 }
