@@ -10,6 +10,11 @@ async function loadAndRenderProjects() {
   const projectCount = document.getElementById('project-count');
   projectCount.textContent = `Total projects: ${projects.length}`;
 
+  const projectsTitle = document.querySelector('.projects-title');
+  if (projectsTitle) {
+    projectsTitle.textContent = `${projects.length} Projects`;
+  }
+
 }
 
 loadAndRenderProjects();
