@@ -131,6 +131,7 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
 
   article.innerHTML = `
     <${headingLevel}>${project.title}</${headingLevel}>
+    <img src="${project.image || 'https://via.placeholder.com/300x200?text=No+Image'}" alt="${project.title}">
     <p>${project.description}</p>
     <a href="${project.link}" target="_blank">Link</a>
 
