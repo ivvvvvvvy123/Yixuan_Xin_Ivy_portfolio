@@ -4,6 +4,7 @@
       "date": "Jul. 2024 - Present",
       "place": "Knight Lab, UC San Diego",
       "alt": "Sleep and gut microbiome",
+      "image": "https://example.com/image1.png",
       "description": "Explored the relationship between sleep quality, psychological disorders, and the gut microbiome using QIIME, RPCA, Qurro, and random forest models. Built pipelines with Birdman and Qadabra for robust ML analysis."
     },
     {
@@ -11,6 +12,7 @@
       "date": "Dec. 2024",
       "place": "UC San Diego",
       "alt": "Recipe model",
+      "image": "https://example.com/image1.png",
       "description": "Performed hypothesis testing and built a decision tree model to predict recipe cooking time. Focused on model interpretability and fairness metrics.",
       "link": "https://github.com/ivvvvvvvy123/recipe_satisfaction"
     },
@@ -19,6 +21,7 @@
       "date": "2024",
       "place": "Independent Research",
       "alt": "Rumination and LCNE",
+      "image": "https://example.com/image1.png",
       "description": "Summarized neurobiological models of rumination and LC-NE system. Conducted EDA and analyzed Neuro Turing machine outputs.",
       "link": "https://github.com/KevinBian107/Blue-Dot-Project"
     },
@@ -27,6 +30,7 @@
       "date": "2024",
       "place": "UC San Diego",
       "alt": "PCA reconstruction",
+      "image": "https://example.com/image1.png",
       "description": "Applied PCA for feature extraction and image reconstruction using The Simpsons dataset. Presented results via slides and an edited video.",
       "link": "https://github.com/mmzhang7/The-Simpsons-PCA-Reconstruction"
     },
@@ -35,6 +39,7 @@
       "date": "Jun. - Sep. 2023",
       "place": "Chinese Academy of Sciences",
       "alt": "AI survey analysis",
+      "image": "https://example.com/image1.png",
       "description": "Designed surveys on AI trust and performance. Applied ML models and reinforcement learning frameworks for behavioral prediction."
     },
     {
@@ -42,6 +47,7 @@
       "date": "Jul. - Aug. 2024",
       "place": "Neuromatch Academy",
       "alt": "Deep Learning Accent Recognition",
+      "image": "https://example.com/image1.png",
       "description": "Designed an efficient tensor conversion pipeline, optimizing data preprocessing to improve model performance and reduce latency. Developed and presented a project on Accent Recognition using Wav2Vec2, focusing on converting datasets into tensors for model training.",
       "link": "https://docs.google.com/presentation/d/1NNXvMrUmop55uNbUFk2VQMhE9tD_eXuGsG24O1TZRpw/edit#slide=id.p"
     },
@@ -50,6 +56,7 @@
       "date": "Mar. 2025",
       "place": "DSC140A(In class) project",
       "alt": "Classification Model",
+      "image": "https://example.com/image1.png",
       "description": "Built a Naive Bayes text classification model from scratch(using only Numpy and Pandas without external packages or libraries) to distinguish Spanish and French words. Did feature engineering on bigram and word-ending features, constructed a vocabulary based, vectorized words and computed log-probabilities for the robust predict.Achieved a 83% test accuracy."
     },
     {
@@ -57,6 +64,7 @@
       "date": "Oct. -Dec. 2023",
       "place": "UCSD Triton NeuroTech club",
       "alt": "EEG data",
+      "image": "https://example.com/image1.png",
       "description": "Tried to decode data from a BCI device Muse and organize project meetings with 4 peers weekly",
       "link":"https://github.com/ivvvvvvvy123/Amusing"
     },
@@ -65,6 +73,7 @@
       "date": "Aug. -Sep. 2023",
       "place": "National Engineering Laboratory for Brain-inspired Intelligence Technology and Application",
       "alt": "Rats video clips",
+      "image": "https://example.com/image1.png",
       "description": "Recorded and processed data by observing rats Forced Swim Test videos. Read papers about Forced Swim Test on rats and made writing summary"
     },
     {
@@ -72,6 +81,7 @@
       "date": "2025",
       "place": "TBD",
       "alt": "TBD",
+      "image": "https://example.com/image1.png",
       "description": "TBD"
     },
     {
@@ -79,6 +89,7 @@
       "date": "2022",
       "place": "TBD",
       "alt": "TBD",
+      "image": "https://example.com/image1.png",
       "description": "TBD"
     },
     {
@@ -86,6 +97,7 @@
       "date": "2024",
       "place": "TBD",
       "alt": "TBD",
+      "image": "https://example.com/image1.png",
       "description": "TBD"
     }
   ]
