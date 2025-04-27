@@ -147,11 +147,34 @@ label.color-scheme{
   z-index: 1000;
 }
 
-.projects a {
+/* .projects a {
   color: #0066cc;
   text-decoration: underline;
   font-size: 0.9rem;
 }
 .projects a:hover {
+  color: #003366;
+} */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.projects article {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0066cc;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+.project-link:hover {
   color: #003366;
 }
