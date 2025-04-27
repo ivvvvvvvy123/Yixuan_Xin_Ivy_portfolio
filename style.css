@@ -146,3 +146,12 @@ label.color-scheme{
   border-radius: 5px;
   z-index: 1000;
 }
+
+.projects a {
+  color: #0066cc;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+.projects a:hover {
+  color: #003366;
+}
