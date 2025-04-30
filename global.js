@@ -130,7 +130,8 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
   const article = document.createElement('article');
 
   article.innerHTML = `
-    <${headingLevel}>${project.title, project.date}</${headingLevel}>
+    <${headingLevel}>${project.title}</${headingLevel}>
+    <${headingLevel}>${project.date}</${headingLevel}>
     <p>${project.description}</p>
     <a href="${project.link}" target="_blank">Link</a>
 
