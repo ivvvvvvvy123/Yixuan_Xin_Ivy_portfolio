@@ -130,12 +130,14 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
   const article = document.createElement('article');
 
   article.innerHTML = `
-  <${headingLevel}>${project.title}</${headingLevel}>
-  <a href="${project.link}" target="_blank">Link</a>
-  <p>${project.description}</p>
-  <p>${project.date}</p>
-`;
+    <${headingLevel} style="display: flex; justify-content: space-between; align-items: center;">
+      <span>${project.title}</span>
+      <span style="font-size: 0.9em; font-weight: normal; color: #666;">${project.date || ''}</span>
+    </${headingLevel}>
 
+    <p>${project.description}</p>
+    ${project.link ? `<a href="${project.link}" target="_blank" class="project-link">Link</a>` : ''}
+  `;
   containerElement.appendChild(article);
 }
 
