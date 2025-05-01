@@ -131,9 +131,9 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
 
   article.innerHTML = `
   <${headingLevel}>${project.title}</${headingLevel}>
-  <p>${project.date}</p>
-  <p>${project.description}</p>
   <a href="${project.link}" target="_blank">Link</a>
+  <p>${project.description}</p>
+  <p>${project.date}</p>
 `;
 
   containerElement.appendChild(article);
