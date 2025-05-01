@@ -130,14 +130,13 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
   const article = document.createElement('article');
 
   article.innerHTML = `
-    <${headingLevel} style="display: flex; justify-content: space-between; align-items: center;">
-      <span>${project.title}</span>
-      <span style="font-size: 0.9em; font-weight: bold>${project.date || ''}</span>
-    </${headingLevel}>
-
+    <${headingLevel}>${project.title}</${headingLevel}>
+    <img src="${project.image || 'https://via.placeholder.com/300x200?text=Image+Coming+Soon'}" alt="${project.title}">
     <p>${project.description}</p>
+    ${project.date ? `<p style="margin-top: 10px; font-weight: bold;">${project.date}</p>` : ''}
     ${project.link ? `<a href="${project.link}" target="_blank" class="project-link">Link</a>` : ''}
   `;
+  
   containerElement.appendChild(article);
 }
 
