@@ -14,9 +14,31 @@ async function loadAndRenderProjects() {
 }
 
 loadAndRenderProjects();
+//lab5 step 1
+//1.4 set up data
+let data = [1, 2];//33% and 66%
+//calculate total
+let total = 0;
+for (let d of data) {
+  total += d;
+}
+//calculate stat and end angles for each slice
+let angle = 0;
+let arcData = [];
 
-let arc = d3.arc().innerRadius(0).outerRadius(50)({
-  startAngle: 0,
-  endAngle: 2 * Math.PI,
-});
-d3.select('svg').append('path').attr('d', arc).attr('fill', 'red');
+for (let d of data) {
+  let endAngle = angle + (d / total) * 2 * Math.PI;
+  arcData.push({ startAngle: angle, endAngle });
+  angle = endAngle;
+}
+
+//calculate actual path for each slice
+let arcs = arcData.map((d) => arcGenerator(d));
+//translate artcs array into <path> element
+let colors = ['gold', 'purple'];
+arcs.forEach((arc, idx) => {
+  d3.select('svg')
+    .append('path')
+    .attr('d', arc)
+    .attr('fill',colors[idx]) 
+})
