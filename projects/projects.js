@@ -16,29 +16,40 @@ async function loadAndRenderProjects() {
 loadAndRenderProjects();
 //lab5 step 1
 //1.4 set up data
-let data = [1, 2];//33% and 66%
-//calculate total
-let total = 0;
-for (let d of data) {
-  total += d;
-}
-//calculate stat and end angles for each slice
-let angle = 0;
-let arcData = [];
+import { fetchJSON, renderProjects } from '../global.js';
+import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
 
-for (let d of data) {
-  let endAngle = angle + (d / total) * 2 * Math.PI;
-  arcData.push({ startAngle: angle, endAngle });
-  angle = endAngle;
+async function loadAndRenderProjects() {
+  const projects = await fetchJSON('../lib/projects.json');
+  const projectsContainer = document.querySelector('.projects');
+  projectsContainer.innerHTML = '';
+  for (const project of projects) {
+    renderProjects(project, projectsContainer, 'h2');
+  }
+  const projectCount = document.getElementById('project-count');
+  projectCount.textContent = `Total projects: ${projects.length}`;
 }
 
-//calculate actual path for each slice
+loadAndRenderProjects();
+
+
+let data = [1, 2];
+
+let arcGenerator = d3.arc()
+  .innerRadius(0)
+  .outerRadius(50);
+
+let sliceGenerator = d3.pie();
+let arcData = sliceGenerator(data);
+
 let arcs = arcData.map((d) => arcGenerator(d));
-//translate artcs array into <path> element
+
 let colors = ['gold', 'purple'];
-arcs.forEach((arc, idx) => {
-  d3.select('svg')
+
+arcs.forEach((arcPath, idx) => {
+  d3.select('#projects-plot') 
     .append('path')
-    .attr('d', arc)
-    .attr('fill',colors[idx]) 
-})
+    .attr('d', arcPath)
+    .attr('fill', colors[idx]);
+});
+
