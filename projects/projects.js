@@ -15,23 +15,19 @@ async function loadAndRenderProjects() {
 
 loadAndRenderProjects();
 
-let data = [1, 2];
+window.addEventListener('DOMContentLoaded', () => {
+  let data = [1, 2];
+  let colors = ['gold', 'purple'];
 
-let arcGenerator = d3.arc()
-  .innerRadius(0)
-  .outerRadius(50);
+  let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
+  let sliceGenerator = d3.pie();
+  let arcData = sliceGenerator(data);
+  let arcs = arcData.map((d) => arcGenerator(d));
 
-let sliceGenerator = d3.pie();
-let arcData = sliceGenerator(data);
-
-let arcs = arcData.map((d) => arcGenerator(d));
-
-let colors = ['gold', 'purple'];
-
-arcs.forEach((arcPath, idx) => {
-  d3.select('#projects-plot') 
-    .append('path')
-    .attr('d', arcPath)
-    .attr('fill', colors[idx]);
+  arcs.forEach((arcPath, idx) => {
+    d3.select('#projects-plot')
+      .append('path')
+      .attr('d', arcPath)
+      .attr('fill', colors[idx]);
+  });
 });
-
