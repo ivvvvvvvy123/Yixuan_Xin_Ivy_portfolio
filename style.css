@@ -178,3 +178,10 @@ label.color-scheme{
 .project-link:hover {
   color: #003366;
 }
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
