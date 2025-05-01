@@ -136,8 +136,6 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
   <a href="${project.link}" target="_blank">Link</a>
 `;
 
-  `;
-
   containerElement.appendChild(article);
 }
 
