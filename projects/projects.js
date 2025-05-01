@@ -14,24 +14,6 @@ async function loadAndRenderProjects() {
 }
 
 loadAndRenderProjects();
-//lab5 step 1
-//1.4 set up data
-import { fetchJSON, renderProjects } from '../global.js';
-import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
-
-async function loadAndRenderProjects() {
-  const projects = await fetchJSON('../lib/projects.json');
-  const projectsContainer = document.querySelector('.projects');
-  projectsContainer.innerHTML = '';
-  for (const project of projects) {
-    renderProjects(project, projectsContainer, 'h2');
-  }
-  const projectCount = document.getElementById('project-count');
-  projectCount.textContent = `Total projects: ${projects.length}`;
-}
-
-loadAndRenderProjects();
-
 
 let data = [1, 2];
 
