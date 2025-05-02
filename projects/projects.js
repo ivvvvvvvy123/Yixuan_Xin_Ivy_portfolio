@@ -15,35 +15,36 @@ async function loadAndRenderProjects() {
     v=>v.length,
     d=>d.year
   );
-  const data = rolledData.map(([year, count]) => {
-    return { label: year, value: count };
+  const data = rolledData.map(([year, count]) => ({
+    label: year, 
+    value: count
+  }));
+
+  const colors = d3.scaleOrdinal(d3.schemeTableau10);
+  const arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
+  const sliceGenerator = d3.pie().value(d => d.value);
+  const arcData = sliceGenerator(data);
+  const arcs = arcData.map(d => arcGenerator(d));
+  d3.select('#projects-plot').selectAll('*').remove();
+
+  arcs.forEach((arcPath, idx) => {
+    d3.select('#projects-plot')
+      .append('path')
+      .attr('d', arcPath)
+      .attr('fill', colors(idx));
+
+  });
+
+  const legend = d3.select('.legend');
+  legend.selectAll('*').remove();
+  data.forEach((d, idx) => {
+    legend
+      .append('li')
+      .attr('style', `--color:${colors(idx)}`) // set the style attribute while passing in parameters
+      .attr('class','legend-item')
+      .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`); // set the inner html of <li>
   });
 }
-
-let colors = d3.scaleOrdinal(d3.schemeTableau10);
-let arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
-let sliceGenerator = d3.pie().value(d => d.value);
-let arcData = sliceGenerator(data);
-let arcs = arcData.map(d => arcGenerator(d));
-d3.select('#projects-plot').selectAll('*').remove();
-
-arcs.forEach((arcPath, idx) => {
-  d3.select('#projects-plot')
-    .append('path')
-    .attr('d', arcPath)
-    .attr('fill', colors(idx));
-
-});
-
-let legend = d3.select('.legend');
-legend.selectAll('*').remove();
-data.forEach((d, idx) => {
-  legend
-    .append('li')
-    .attr('style', `--color:${colors(idx)}`) // set the style attribute while passing in parameters
-    .attr('class','legend-item')
-    .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`); // set the inner html of <li>
-});
 loadAndRenderProjects();
 
 
