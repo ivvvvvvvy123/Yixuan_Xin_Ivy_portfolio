@@ -1,7 +1,7 @@
 [
     {
       "title": "Sleep-Gut Microbiome Analysis",
-      "date": "Jul. 2024 - Present",
+      "year": "2024",
       "place": "Knight Lab, UC San Diego",
       "alt": "Sleep and gut microbiome",
       "image": "https://example.com/image1.png",
@@ -9,7 +9,7 @@
     },
     {
       "title": "Recipe Time Estimation",
-      "date": "Dec. 2024",
+      "year": "2024",
       "place": "UC San Diego",
       "alt": "Recipe model",
       "image": "https://example.com/image1.png",
@@ -18,7 +18,7 @@
     },
     {
       "title": "Blue Dot Project",
-      "date": "2024",
+      "year": "2024",
       "place": "Independent Research",
       "alt": "Rumination and LCNE",
       "image": "https://example.com/image1.png",
@@ -27,7 +27,7 @@
     },
     {
       "title": "Simpsons PCA Face Reconstruction",
-      "date": "2024",
+      "year": "2024",
       "place": "UC San Diego",
       "alt": "PCA reconstruction",
       "image": "https://example.com/image1.png",
@@ -36,7 +36,7 @@
     },
     {
       "title": "HCI Survey & AI Research",
-      "date": "Jun. - Sep. 2023",
+      "year": "2023",
       "place": "Chinese Academy of Sciences",
       "alt": "AI survey analysis",
       "image": "https://example.com/image1.png",
@@ -44,7 +44,7 @@
     },
     {
       "title": "Accent Recognition",
-      "date": "Jul. - Aug. 2024",
+      "year": "2024",
       "place": "Neuromatch Academy",
       "alt": "Deep Learning Accent Recognition",
       "image": "https://example.com/image1.png",
@@ -53,7 +53,7 @@
     },
     {
       "title": "Language differentiation",
-      "date": "Mar. 2025",
+      "year": "2025",
       "place": "DSC140A(In class) project",
       "alt": "Classification Model",
       "image": "https://example.com/image1.png",
@@ -61,7 +61,7 @@
     },
     {
       "title": "Amusing",
-      "date": "Oct. -Dec. 2023",
+      "year": "2023",
       "place": "UCSD Triton NeuroTech club",
       "alt": "EEG data",
       "image": "https://example.com/image1.png",
@@ -70,7 +70,7 @@
     },
     {
       "title": "Rats Forced Swim Test",
-      "date": "Aug. -Sep. 2023",
+      "year": "2023",
       "place": "National Engineering Laboratory for Brain-inspired Intelligence Technology and Application",
       "alt": "Rats video clips",
       "image": "https://example.com/image1.png",
@@ -78,7 +78,7 @@
     },
     {
       "title": "TBD",
-      "date": "2025",
+      "year": "2025",
       "place": "TBD",
       "alt": "TBD",
       "image": "https://example.com/image1.png",
@@ -86,7 +86,7 @@
     },
     {
       "title": "TBD",
-      "date": "2022",
+      "year": "2022",
       "place": "TBD",
       "alt": "TBD",
       "image": "https://example.com/image1.png",
@@ -94,7 +94,7 @@
     },
     {
       "title": "TBD",
-      "date": "2024",
+      "year": "2024",
       "place": "TBD",
       "alt": "TBD",
       "image": "https://example.com/image1.png",

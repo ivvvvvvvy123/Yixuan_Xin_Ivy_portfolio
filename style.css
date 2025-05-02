@@ -213,3 +213,24 @@ ul.legend{
   display:inline-block;
 }
 
+
+.chart-container {
+  display: flex;
+  align-items: center;    
+  gap: 2rem;      
+  flex-wrap: wrap;   
+  margin-top: 2rem;
+}
+
+/* Make the chart SVG responsive */
+.chart-container svg {
+  flex-shrink: 0;     
+  width: 200px;
+  height: 200px;
+}
+
+/* Let the legend expand */
+ul.legend {
+  flex: 1;
+}
+
