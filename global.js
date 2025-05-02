@@ -111,7 +111,7 @@ for (let p of pages) {
 // : "https://ivvvvvvvy123.github.io/Yixuan_Xin_Ivy_portfolio";
 //making sure work locally and deployed
 //url = !url.startsWith('http') ? BASE_PATH + url : url;
-//lab4 step 1.2 fetchJSON() func
+//lab4 step 1.2 
 export async function fetchJSON(url) {
   try {
     // Fetch the JSON file from the given URL
