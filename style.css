@@ -179,13 +179,18 @@ label.color-scheme{
   color: #003366;
 }
 
-#projects-pie-plot {
-  max-width: 20em;
-  margin-block: 2em;
 
-  overflow: visible;
+ul.legend{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap:1rem;
+  margin-top: 1rem;
+  padding:1rem;
+  border: 1px solid #0066cc;
+  border-radius: 8px;
+  background-color: #eee;
+  list-style:none;
 }
-
 .legend-item{
   display:flex;
   align-items:center;
@@ -214,32 +219,18 @@ label.color-scheme{
 /* Make the chart SVG responsive */
 .chart-container svg {
   flex-shrink: 0;     
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
 }
 
 /* Let the legend expand */
 ul.legend {
   flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 1rem;
-  list-style: none;
-  justify-content: flex-start; 
-}
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: #eee;
-  padding: 0.3rem 0.5rem;
-  border-radius: 4px;
 }
 
 #projects-plot:has(path:hover) path:not(:hover) {
   opacity: 0.5;
-  transition: opacity 0.3s ease 300ms;
+  transition: opacity 0.3s ease;
 }
 path{
   cursor: pointer;
@@ -257,3 +248,17 @@ path.selected{
   font-weight: bold;
 }
 
+.legend {
+  display: flex;
+  flex-wrap: wrap;  
+  gap: 1rem;      
+  padding: 1rem 0;
+  list-style: none;
+  justify-content: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

@@ -30,12 +30,16 @@ function renderPieChart(projectsGiven){
   const sliceGenerator = d3.pie().value(d => d.value);
   const arcData = sliceGenerator(data);
   const arcs = arcData.map(d => arcGenerator(d));
-  const svg=d3.select('#projects-plot').attr('width',150).attr('height',150);
+  const radius=75;
+  const svg=d3.select('#projects-plot').attr('width',radius*2).attr('height',radius*2).attr('viewBox', `0 0 ${radius * 2} ${radius * 2}`);
   svg.selectAll('*').remove();
   legend.selectAll('*').remove();
+  const g = svg.append('g')
+  .attr('transform', `translate(${radius}, ${radius})`);
+
 
   arcs.forEach((arc, i) => {
-    svg
+    g
       .append('path')
       .attr('d', arc)
       .attr('fill', colors(i))
