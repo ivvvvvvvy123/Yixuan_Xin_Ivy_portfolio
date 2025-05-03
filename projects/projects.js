@@ -3,6 +3,8 @@ import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
 
 let allProjects=[];
 let query = '';
+let selectedIndex = -1; 
+
 
 const projectsContainer = document.querySelector('.projects');
 const searchInput=document.querySelector('.searchBar');
@@ -25,14 +27,21 @@ function renderPieChart(projectsGiven){
   const sliceGenerator = d3.pie().value(d => d.value);
   const arcData = sliceGenerator(data);
   const arcs = arcData.map(d => arcGenerator(d));
-
-  d3.select('#projects-plot').selectAll('*').remove();
+  const svg=d3.select('#projects-plot');
+  svg.selectAll('*').remove();
   legend.selectAll('*').remove();
-  arcs.forEach((arcPath, idx) => {
-    d3.select('#projects-plot')
+
+  arcs.forEach((arc, i) => {
+    svg
       .append('path')
-      .attr('d', arcPath)
-      .attr('fill', colors(idx));
+      .attr('d', arc)
+      .attr('fill', colors(i))
+      .on('click', () => {
+        selectedIndex=selectedIndex===i?-1:i;
+        svg.selectAll('path').attr('class', (_, idx) => idx === selectedIndex ? 'selected' : '');
+
+        legend.selectAll('li').attr('class', (_, idx) => idx === selectedIndex ? 'legend-item selected' : 'legend-item');
+      });
   });
 
   data.forEach((d, idx) => {
