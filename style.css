@@ -234,3 +234,9 @@ ul.legend {
   flex: 1;
 }
 
+
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
