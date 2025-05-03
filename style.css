@@ -205,12 +205,12 @@ ul.legend{
   font-size:0.9rem;
 }
 .swatch{
+  display: inline-block;
   width:1rem;
   height:1rem;
   aspect-ratio:1/1;
   background-color: var(--color);
   border-radius: 4px;
-  display:inline-block;
 }
 
 
