@@ -186,17 +186,6 @@ label.color-scheme{
   overflow: visible;
 }
 
-ul.legend{
-  display:grid;
-  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
-  gap:1rem;
-  margin-top: 1rem;
-  padding:1rem;
-  border: 1px solid #0066cc;
-  border-radius: 8px;
-  background-color: #eee;
-  list-style:none;
-}
 .legend-item{
   display:flex;
   align-items:center;
@@ -225,13 +214,27 @@ ul.legend{
 /* Make the chart SVG responsive */
 .chart-container svg {
   flex-shrink: 0;     
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
 }
 
 /* Let the legend expand */
 ul.legend {
   flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  list-style: none;
+  justify-content: flex-start; 
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #eee;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
 }
 
 #projects-plot:has(path:hover) path:not(:hover) {
@@ -253,3 +256,4 @@ path.selected{
   background-color: var(--color);
   font-weight: bold;
 }
+
