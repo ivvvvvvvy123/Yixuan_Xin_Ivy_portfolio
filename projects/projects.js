@@ -22,6 +22,9 @@ function renderPieChart(projectsGiven){
     label: year, 
     value: count
   }));
+  //step 5.3
+  const selectedYear =data[selectedIndex]?.label;
+  
   const colors = d3.scaleOrdinal(d3.schemeTableau10);
   const arcGenerator = d3.arc().innerRadius(0).outerRadius(50);
   const sliceGenerator = d3.pie().value(d => d.value);
@@ -41,6 +44,10 @@ function renderPieChart(projectsGiven){
         svg.selectAll('path').attr('class', (_, idx) => idx === selectedIndex ? 'selected' : '');
 
         legend.selectAll('li').attr('class', (_, idx) => idx === selectedIndex ? 'legend-item selected' : 'legend-item');
+        const filtered = selectedIndex === -1
+        ? projectsGiven
+        : projectsGiven.filter(p => p.year === data[selectedIndex].label);
+        renderFilteredProjects(filtered);
       });
   });
 
