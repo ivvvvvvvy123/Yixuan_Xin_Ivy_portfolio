@@ -53,6 +53,7 @@ function renderPieChart(projectsGiven){
         : projectsGiven.filter(p => p.year === data[selectedIndex].label);
         renderFilteredProjects(filtered);
       });
+      
   });
 
   data.forEach((d, idx) => {
