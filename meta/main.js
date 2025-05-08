@@ -41,6 +41,39 @@ function processCommits(data) {
       });
 }
 
-let data = await loadData();
-let commits = processCommits(data);
-console.log(commits);
+//step 1.3
+function renderCommitInfo(data, commits) {
+    // Create the dl element
+    const dl = d3.select('#stats').append('dl').attr('class', 'stats');
+  
+    // Add total LOC
+    dl.append('dt').html('Total <abbr title="Lines of code">LOC</abbr>');
+    dl.append('dd').text(data.length);
+  
+    // Add total commits
+    dl.append('dt').text('Total commits');
+    dl.append('dd').text(commits.length);
+  
+    // Add Deepest line
+    const deepline=d3.max(data,d=>d.line);
+    dl.append('dt').html('Deepest line');
+    dl.append('dd').text(deepline);
+
+
+    //Maximum file length
+    const maxfile=d3.max(data,d=>d.length);
+    dl.append('dt').html('Maximum file length');
+    dl.append('dd').text(maxfile);
+    //Number of files in the codebase
+    const numfile=new Set(data.map(d=>d.file)).size;
+    dl.append('dt').html('Number of files in the codebase');
+    dl.append('dd').text(numfile);
+
+
+
+  }
+  
+  let data = await loadData();
+  let commits = processCommits(data);
+  
+  renderCommitInfo(data, commits);
