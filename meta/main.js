@@ -100,6 +100,44 @@ function renderSelectionCount(selection) {
 
   return selectedCommits;
 }
+function updateTooltipVisibility(isVisible) {
+  const tooltip = document.getElementById('commit-tooltip');
+  tooltip.hidden = !isVisible;
+}
+//step 5.6
+function renderLanguageBreakdown(selection) {
+  const selectedCommits = selection
+    ? commits.filter((d) => isCommitSelected(selection, d))
+    : [];
+  const container = document.getElementById('language-breakdown');
+
+  if (selectedCommits.length === 0) {
+    container.innerHTML = '';
+    return;
+  }
+  const requiredCommits = selectedCommits.length ? selectedCommits : commits;
+  const lines = requiredCommits.flatMap((d) => d.lines);
+
+  // Use d3.rollup to count lines per language
+  const breakdown = d3.rollup(
+    lines,
+    (v) => v.length,
+    (d) => d.type,
+  );
+
+  // Update DOM with breakdown
+  container.innerHTML = '';
+
+  for (const [language, count] of breakdown) {
+    const proportion = count / lines.length;
+    const formatted = d3.format('.1~%')(proportion);
+
+    container.innerHTML += `
+            <dt>${language}</dt>
+            <dd>${count} lines (${formatted})</dd>
+        `;
+  }
+}
 
 function brushed(event) {
   const selection = event.selection;
@@ -107,7 +145,9 @@ function brushed(event) {
     isCommitSelected(selection, d),
   );
   renderSelectionCount(selection);
+  renderLanguageBreakdown(selection);
 }
+
 
 function isCommitSelected(selection, commit) {
   if (!selection) {
