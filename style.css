@@ -104,7 +104,6 @@ article {
 h2 {
   font-size: 1.8em;
   margin-top: 2em;
-  border-bottom: 2px solid var(--color-accent);
   padding-bottom: 0.3em;
 }
 
@@ -251,10 +250,25 @@ path.selected{
   gap: 0.5rem;
 }
 
-/* Info styling */
+/* Gridline styles */
+.gridlines line {
+  stroke: #ddd; /* Faded gray color */
+  stroke-opacity: 0.5; /* Make it more subtle */
+}
+
+/* Axis styles */
+.axis path,
+.axis line {
+  stroke: #ddd;
+  shape-rendering: crispEdges;
+}
+
+/* lab 6 step 3 Info styling */
 dl.info {
   display: grid;
   grid-template-columns: auto 1fr;
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
   gap: 0.5em 1em;
   margin: 0;
   padding: 1em;
@@ -263,6 +277,10 @@ dl.info {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   font-size: 14px;
   color: #333;
+}
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
 }
 /* Tooltip styles */
 .tooltip {
