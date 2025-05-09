@@ -1,4 +1,6 @@
 import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
+// Global scales
+let xScale, yScale;
 async function loadData() {
 const data = await d3.csv('loc.csv', (row) => ({
     ...row,
@@ -72,6 +74,53 @@ function renderCommitInfo(data, commits) {
 
 
   }
+  //lab6 step 5
+function createBrushSelector(svg, usableArea) {
+  // Create the brush
+  const brush = d3.brush()
+      .extent([[usableArea.left, usableArea.top], [usableArea.right, usableArea.bottom]])
+      .on('start brush end', brushed);
+
+  svg.append('g')
+      .attr('class', 'brush')
+      .call(brush);
+
+  // Raise dots and everything after overlay
+  svg.selectAll('.dots, .overlay ~ *').raise();
+}
+function renderSelectionCount(selection) {
+  const selectedCommits = selection
+    ? commits.filter((d) => isCommitSelected(selection, d))
+    : [];
+
+  const countElement = document.querySelector('#selection-count');
+  countElement.textContent = `${
+    selectedCommits.length || 'No'
+  } commits selected`;
+
+  return selectedCommits;
+}
+
+function brushed(event) {
+  const selection = event.selection;
+  d3.selectAll('circle').classed('selected', (d) =>
+    isCommitSelected(selection, d),
+  );
+  renderSelectionCount(selection);
+}
+
+function isCommitSelected(selection, commit) {
+  if (!selection) {
+    return false;
+  }
+  // TODO: return true if commit is within brushSelection
+  // and false if not
+  const [x0, x1] = selection.map((d) => d[0]); 
+  const [y0, y1] = selection.map((d) => d[1]); 
+  const x = xScale(commit.datetime); 
+  const y = yScale(commit.hourFrac); 
+  return x >= x0 && x <= x1 && y >= y0 && y <= y1; 
+}
   
 
   //step 2.1
@@ -79,41 +128,44 @@ function renderCommitInfo(data, commits) {
     const width = 1000;
     const height = 600;
     const svg = d3.select('#chart').append('svg').attr('viewBox', `0 0 ${width} ${height}`).style('overflow', 'visible');
-    const xScale = d3
+    //creating scales
+    xScale = d3
     .scaleTime()
     .domain(d3.extent(commits, (d) => d.datetime))
     .range([0, width])
     .nice();
-    const yScale = d3.scaleLinear().domain([0, 24]).range([height, 0]);
+    yScale = d3.scaleLinear().domain([0, 24]).range([height, 0]);
+
+    //sort commits by total lines to solve overlaps
     const sortedCommits = d3.sort(commits, (d) => -d.totalLines);
-    //drawing the scatter plot by adding circles to our SVG
-    const dots = svg.append('g').attr('class', 'dots');
     const [minLines, maxLines] = d3.extent(commits, (d) => d.totalLines);
     const rScale = d3
   .scaleSqrt()
   .domain([minLines, maxLines])
-  .range([2, 30]);
+  .range([3, 30]);
+
+    //drawing the scatter plot by adding circles to our SVG
+    const dots = svg.append('g').attr('class', 'dots');
     dots
   .selectAll('circle')
-  .data(commits)
+  .data(sortedCommits)
   .join('circle')
   .attr('cx', (d) => xScale(d.datetime))
   .attr('cy', (d) => yScale(d.hourFrac))
   .attr('r', (d) => rScale(d.totalLines))
-  .style('fill-opacity', 0.7) 
+  .style('fill-opacity', 0.6) 
+  .style('fill', 'orange')
   .on('mouseenter', (event, commit) => {
     d3.select(event.currentTarget).style('fill-opacity', 1); // Full opacity on hover
     renderTooltipContent(commit);
     updateTooltipVisibility(true);
     updateTooltipPosition(event);
   })
-  // .on('mousemove', (event) => {
-  //   updateTooltipPosition(event);
-  // })
   .on('mouseleave', (event) => {
     d3.select(event.currentTarget).style('fill-opacity', 0.7);
     updateTooltipVisibility(false);
   });
+  
 
     //2.2: create space for axes:
     const margin = { top: 10, right: 10, bottom: 30, left: 20 };
@@ -166,6 +218,7 @@ function renderCommitInfo(data, commits) {
         dateStyle: 'full',
       });
     }
+    createBrushSelector(svg, usableArea);
 
 
     }
