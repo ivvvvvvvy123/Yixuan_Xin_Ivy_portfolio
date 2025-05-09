@@ -98,15 +98,13 @@ function renderCommitInfo(data, commits) {
   .on('mouseenter', (event, commit) => {
     renderTooltipContent(commit);
     updateTooltipVisibility(true);
+    updateTooltipPosition(event);
   })
   .on('mousemove', (event) => {
+    updateTooltipPosition(event);
+  })
+  .on('mouseleave', () => {
     updateTooltipVisibility(false);
-  //   d3.select('.tooltip')
-  //     .style('top', (event.pageY + 10) + 'px')
-  //     .style('left', (event.pageX + 10) + 'px');
-  // })
-  // .on('mouseleave', () => {
-  //   d3.select('.tooltip').style('display', 'none');
   });
 
     //2.2: create space for axes:
@@ -164,10 +162,11 @@ function renderCommitInfo(data, commits) {
 
     }
 
-    //lab 6 step3.3 
-    function updateTooltipVisibility(isVisible) {
+    //lab 6 step3.3, 3.4 pisiton the tooltipnear the mouse cursor
+    function updateTooltipPosition(event) {
       const tooltip = document.getElementById('commit-tooltip');
-      tooltip.hidden = !isVisible;
+      tooltip.style.left = `${event.clientX}px`;
+      tooltip.style.top = `${event.clientY}px`;
     }
 
 
