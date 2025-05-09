@@ -8,10 +8,22 @@
     <script type="module" src="./main.js"></script>
     <h2>Commits by time of day</h2>
     <div id="chart"></div>
+    <div class="tooltip"></div>
+
 
 </head>
 <body>
-    This page includes stats about the code of this website.
+    <dl id="commit-tooltip" class="info tooltip">
+        <dt>Commit</dt>
+        <dd>
+          <a href="" id="commit-link" target="_blank"></a>
+        </dd>
+      
+        <dt>Date</dt>
+        <dd id="commit-date"></dd>
+      
+        <!-- Add: Time, author, lines edited -->
+      </dl>
     
 </body>
 </html>
