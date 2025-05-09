@@ -194,7 +194,10 @@ function isCommitSelected(selection, commit) {
   .attr('cy', (d) => yScale(d.hourFrac))
   .attr('r', (d) => rScale(d.totalLines))
   .style('fill-opacity', 0.6) 
-  .style('fill', 'orange')
+  .style('fill', (d) => {
+    const hour = d.datetime.getHours();
+    return (hour >= 6 && hour < 18) ? "#EC8F3F" : "#2574bf";
+  })
   .on('mouseenter', (event, commit) => {
     d3.select(event.currentTarget).style('fill-opacity', 1); // Full opacity on hover
     renderTooltipContent(commit);
