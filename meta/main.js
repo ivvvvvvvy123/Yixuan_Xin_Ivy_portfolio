@@ -85,25 +85,33 @@ function renderCommitInfo(data, commits) {
     .range([0, width])
     .nice();
     const yScale = d3.scaleLinear().domain([0, 24]).range([height, 0]);
+    const sortedCommits = d3.sort(commits, (d) => -d.totalLines);
     //drawing the scatter plot by adding circles to our SVG
     const dots = svg.append('g').attr('class', 'dots');
+    const [minLines, maxLines] = d3.extent(commits, (d) => d.totalLines);
+    const rScale = d3
+  .scaleSqrt()
+  .domain([minLines, maxLines])
+  .range([2, 30]);
     dots
   .selectAll('circle')
   .data(commits)
   .join('circle')
   .attr('cx', (d) => xScale(d.datetime))
   .attr('cy', (d) => yScale(d.hourFrac))
-  .attr('r', 5)
-  .attr('fill', 'steelblue')
+  .attr('r', (d) => rScale(d.totalLines))
+  .style('fill-opacity', 0.7) 
   .on('mouseenter', (event, commit) => {
+    d3.select(event.currentTarget).style('fill-opacity', 1); // Full opacity on hover
     renderTooltipContent(commit);
     updateTooltipVisibility(true);
     updateTooltipPosition(event);
   })
-  .on('mousemove', (event) => {
-    updateTooltipPosition(event);
-  })
-  .on('mouseleave', () => {
+  // .on('mousemove', (event) => {
+  //   updateTooltipPosition(event);
+  // })
+  .on('mouseleave', (event) => {
+    d3.select(event.currentTarget).style('fill-opacity', 0.7);
     updateTooltipVisibility(false);
   });
 
