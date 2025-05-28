@@ -56,6 +56,7 @@ let pages = [
     { url: 'contact/', title: 'Contact' },
     { url: 'cv/', title: 'CV' },
     { url: 'https://github.com/ivvvvvvvy123', title: 'GitHub' },
+    { url: 'meta/', title: 'Meta' },
   ];
 
   //3.1create a new <nav> element
