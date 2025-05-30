@@ -356,3 +356,19 @@ circle.selected {
   fill: #ff6b6b !important;;
   stroke-width: 2px;
 }
+
+.commit-slider-row {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.commit-slider-row label {
+  white-space: nowrap;
+}
+
+.commit-slider-row time {
+  margin-left: auto;
+  font-weight: bold;
+}

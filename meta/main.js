@@ -279,3 +279,31 @@ function isCommitSelected(selection, commit) {
    let commits = processCommits(data);
    renderCommitInfo(data, commits);
    renderScatterPlot(data, commits);
+
+
+   let commitProgress = 100;
+   let timeScale = d3
+  .scaleTime()
+  .domain([
+    d3.min(commits, (d) => d.datetime),
+    d3.max(commits, (d) => d.datetime),
+  ])
+  .range([0, 100]);
+let commitMaxTime = timeScale.invert(commitProgress);
+const commitProgressslider = document.getElementById('commit-progress');
+const selectedTime=document.getElementById("commit-time");
+function formatTime(date) {
+  return date.toLocaleString('en-US', { dateStyle: "long",
+  timeStyle: 'short' }); // Format as HH:MM AM/PM
+} 
+function onTimeSliderChange(){
+  if (commitMaxTime===-1){
+    selectedTime.textContent = '';
+  }
+  else{
+    const commitMaxTime =  timeScale.invert(commitProgressslider.value);
+    selectedTime.textContent=formatTime(commitMaxTime);
+  }
+}
+commitProgressslider.addEventListener('input', onTimeSliderChange);
+onTimeSliderChange();
