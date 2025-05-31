@@ -444,12 +444,10 @@ d3.select('#scatter-story')
   .data(commits)
   .join();
   const scroller = scrollama();
-  scroller
-    .setup({
-      container: '#scrolly-1',
-      step: '#scrolly-1 .step',
-      offset:0.5,
-      debug:true,
-    })
-    .onStepEnter(onStepEnter);
+scroller
+  .setup({
+    container: '#scrolly-1',
+    step: '#scrolly-1 .step',
+  })
+  .onStepEnter(onStepEnter);
   

@@ -381,19 +381,20 @@ circle.selected {
 #files {
   display: grid;
   grid-template-columns: 1fr 4fr;
+}
 
-  > div {
+#files> div {
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: subgrid;
   }
 
-  dt code {
+  #files dt code {
     font-family: monospace;
     font-weight: bold;
   }
   
-  dt small {
+  #files dt small {
     display: block;
     font-size: 0.8em;
     color: #666;
@@ -402,7 +403,7 @@ circle.selected {
   }
   
 
-  dd {
+  #files dd {
     grid-column: 2;
     display: flex;
     flex-wrap: wrap;
@@ -412,7 +413,7 @@ circle.selected {
     padding-top: 0.6em;
     margin-left: 0;
   }
-}
+
 
 .loc {
   display: flex;
