@@ -1,4 +1,5 @@
 import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
+import scrollama from 'https://cdn.jsdelivr.net/npm/scrollama@3.2.0/+esm';
 // Global scales
 let xScale, yScale;
 async function loadData() {
@@ -40,12 +41,15 @@ function processCommits(data) {
         });
   
         return ret;
+        
       });
 }
 
 //step 1.3
 function renderCommitInfo(data, commits) {
     // Create the dl element
+    const container = d3.select('#stats');
+    container.html(''); 
     const dl = d3.select('#stats').append('dl').attr('class', 'stats');
   
     // Add total LOC
@@ -346,7 +350,9 @@ function onTimeSliderChange(){
     const commitMaxTime =  timeScale.invert(commitProgressslider.value);
     selectedTime.textContent=formatTime(commitMaxTime);
     filteredCommits = commits.filter((d) => d.datetime <= commitMaxTime);
+    
     updateFileDisplay(filteredCommits);
+    renderCommitInfo(data, filteredCommits);
 
   }
 }
@@ -401,3 +407,49 @@ function updateScatterPlot(data, commits) {
       updateTooltipVisibility(false);
     });
 }
+
+
+//step 3.2:
+d3.select('#scatter-story')
+  .selectAll('.step')
+  .data(commits)
+  .join('div')
+  .attr('class', 'step')
+  .html(
+    (d, i) => `
+		On ${d.datetime.toLocaleString('en', {
+      dateStyle: 'full',
+      timeStyle: 'short',
+    })},
+		I made <a href="${d.url}" target="_blank">${
+      i > 0 ? 'another fantastic commit' : 'my first commit, and it was fantabulous'
+    }</a>.
+		I edited ${d.totalLines} lines across ${
+      d3.rollups(
+        d.lines,
+        (D) => D.length,
+        (d) => d.file,
+      ).length
+    } files.
+		Then I looked over all I had made, and I saw that it was very brilliant and amazing:) Genius.
+	`,
+  );
+  function onStepEnter(response) {
+    const commit = response.element.__data__;
+    const filtered = commits.filter(d => d.datetime <= commit.datetime);  
+    updateFileDisplay(filtered);        
+  }
+  
+  d3.selectAll('#scatter-story .step')
+  .data(commits)
+  .join();
+  const scroller = scrollama();
+  scroller
+    .setup({
+      container: '#scrolly-1',
+      step: '#scrolly-1 .step',
+      offset:0.5,
+      debug:true,
+    })
+    .onStepEnter(onStepEnter);
+  
