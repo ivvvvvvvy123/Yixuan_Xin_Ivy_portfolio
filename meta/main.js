@@ -320,7 +320,12 @@ function updateFileDisplay(filteredCommits){
 filesContainer.select('dt > code').text((d) => d.name);
 filesContainer.select('dd').text((d) => `${d.lines.length} lines`);
   updateScatterPlot(data, filteredCommits);
-  
+filesContainer
+.select('dd')
+.selectAll('div')
+.data((d) => d.lines)
+.join('div')
+.attr('class', 'loc');
 }
 function formatTime(date) {
   return date.toLocaleString('en-US', { dateStyle: "long",
