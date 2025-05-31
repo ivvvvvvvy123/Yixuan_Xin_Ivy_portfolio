@@ -388,9 +388,19 @@ circle.selected {
     grid-template-columns: subgrid;
   }
 
-  dt {
-    grid-column: 1;
+  dt code {
+    font-family: monospace;
+    font-weight: bold;
   }
+  
+  dt small {
+    display: block;
+    font-size: 0.8em;
+    color: #666;
+    opacity: 0.8;
+    margin-top: 0.1em;
+  }
+  
 
   dd {
     grid-column: 2;
@@ -408,6 +418,6 @@ circle.selected {
   display: flex;
   width: 0.5em;
   aspect-ratio: 1;
-  background: steelblue;
+  background-color: var(--color);
   border-radius: 50%;
 }

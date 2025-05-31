@@ -295,6 +295,8 @@ let filteredCommits=commits;
 
 const commitProgressslider = document.getElementById('commit-progress');
 const selectedTime=document.getElementById("commit-time");
+//step 2.4
+let colors = d3.scaleOrdinal(d3.schemeTableau10);
 
 function updateFileDisplay(filteredCommits){
   let lines = filteredCommits.flatMap((d) => d.lines);
@@ -302,7 +304,8 @@ function updateFileDisplay(filteredCommits){
   .groups(lines, (d) => d.file)
   .map(([name, lines]) => {
     return { name, lines };
-  });
+  })
+  .sort((a, b) => b.lines.length - a.lines.length);
   let filesContainer = d3
 .select('#files')
 .selectAll('div')
@@ -317,15 +320,19 @@ function updateFileDisplay(filteredCommits){
 );
 
 // This code updates the div info
-filesContainer.select('dt > code').text((d) => d.name);
-filesContainer.select('dd').text((d) => `${d.lines.length} lines`);
+filesContainer.select('dt').html(
+  (d) =>
+    `<code>${d.name}</code><small>${d.lines.length} lines</small>`,
+);
+
   updateScatterPlot(data, filteredCommits);
 filesContainer
 .select('dd')
 .selectAll('div')
 .data((d) => d.lines)
 .join('div')
-.attr('class', 'loc');
+.attr('class', 'loc')
+.attr('style', (d) => `--color: ${colors(d.type)}`);
 }
 function formatTime(date) {
   return date.toLocaleString('en-US', { dateStyle: "long",
