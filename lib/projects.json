@@ -52,7 +52,7 @@
       "description": "Built a Naive Bayes text classification model from scratch(using only Numpy and Pandas without external packages or libraries) to distinguish Spanish and French words. Did feature engineering on bigram and word-ending features, constructed a vocabulary based, vectorized words and computed log-probabilities for the robust predict.Achieved a 83% test accuracy."
     },
     {
-      "title": "Amusing",
+      "title": "Amusing BCI headband",
       "year": "2023",
       "place": "UCSD Triton NeuroTech club",
       "alt": "EEG data",
@@ -77,16 +77,15 @@
     {
       "title": "Rats body feature pattern demonstration",
       "year": "2025",
-      "place": "TBD",
       "alt": "TBD",
       "description": "How do circadian rhythms and estrus cycles differently influence activity and temperature patterns in male and female mice? "
     },
     {
-      "title": "TBD",
-      "year": "2024",
-      "place": "TBD",
+      "title": "Effects of 24 Hours Sleep deprivation on cognitive mental health",
+      "year": "2025",
       "alt": "TBD",
-      "description": "TBD"
+      "description": "Built an interactive website using D3.js, HTML, CSS and JavaScript to visualize findings from published research on sleep deprivation and presented 50+ people at project showcase",
+      "link":"https://glyjtha.github.io/dsc106_final_project/new_main.html"
     }
   ]
   

@@ -68,19 +68,42 @@ button {
   grid-column: 1 / -1;
   width: 100%;
 }
-.projects article{
-  display:grid;
-  grid-template-rows: subgrid;
-  grid-row: span 3;
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
 }
-.projects h2{
-  margin:0;
-  font-size: 1.2em;
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  background: #fff;
+  height: 100%;
 }
-.projects img{
-  width:100%;
-  border-radius:0.5em;
+
+.project-title {
+  margin: 0 0 8px;
+  line-height: 1.2;
 }
+
+.project-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;          
+}
+
+.project-description { margin: 0; }
+.project-meta { margin: 0; }
+
+.project-link {
+  text-decoration: underline;
+}
+.project-card
+
 /*making contrast between diferent headings*/
 h1, h2, h3, h4, h5, h6{
   line-height: 1.1;

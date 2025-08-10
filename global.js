@@ -59,7 +59,7 @@ let pages = [
     { url: 'meta/', title: 'Meta' },
   ];
 
-  //3.1create a new <nav> element
+  //3.1 create a new <nav> element
 let nav = document.createElement('nav');
 document.body.prepend(nav);
 //going throug a for loop to iterate over the page and add <a> in the <nav>
@@ -127,19 +127,35 @@ export async function fetchJSON(url) {
   }
 }
 
+// export function renderProjects(project, containerElement, headingLevel = 'h2') {
+//   const article = document.createElement('article');
+
+//   article.innerHTML = `
+//     <${headingLevel}>${project.title}</${headingLevel}>
+//     <img src="${project.image || 'https://via.placeholder.com/300x200?text=Image+Coming+Soon'}" alt="${project.title}">
+//     <p>${project.description}</p>
+//     ${project.year ? `<p><strong>Year:</strong> ${project.year}</p>` : ''}
+//     ${project.link ? `<a href="${project.link}" target="_blank" class="project-link">Link</a>` : ''}
+//   `;
+  
+//   containerElement.appendChild(article);
+// }
 export function renderProjects(project, containerElement, headingLevel = 'h2') {
   const article = document.createElement('article');
+  article.className = 'project-card';
 
-  article.innerHTML = `
-    <${headingLevel}>${project.title}</${headingLevel}>
-    <img src="${project.image || 'https://via.placeholder.com/300x200?text=Image+Coming+Soon'}" alt="${project.title}">
-    <p>${project.description}</p>
-    ${project.year ? `<p><strong>Year:</strong> ${project.year}</p>` : ''}
-    ${project.link ? `<a href="${project.link}" target="_blank" class="project-link">Link</a>` : ''}
-  `;
-  
+  const titleHTML = `<${headingLevel} class="project-title">${project.title || ''}</${headingLevel}>`;
+  const descriptionHTML = `<p class="project-description">${project.description || ''}</p>`;
+  const yearHTML = project.year ? `<p class="project-meta"><strong>Year:</strong> ${project.year}</p>` : '';
+  const linkHTML = project.link
+    ? `<p><a href="${project.link}" target="_blank" rel="noopener" class="project-link">View Project</a></p>`
+    : '';
+
+  article.innerHTML = `${titleHTML}${descriptionHTML}${yearHTML}${linkHTML}`;
   containerElement.appendChild(article);
 }
+
+
 
 export async function fetchGithubData(username) {
   return fetchJSON(`https://api.github.com/users/${username}`);
