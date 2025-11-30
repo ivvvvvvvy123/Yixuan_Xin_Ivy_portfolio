@@ -22,12 +22,27 @@
       "link": "https://github.com/ivvvvvvvy123/recipe_satisfaction"
     },
     {
+      "title": "Effects of 24 Hours Sleep deprivation on cognitive mental health",
+      "year": "2025",
+      "alt": "TBD",
+      "description": "Built an interactive website using D3.js, HTML, CSS and JavaScript to visualize findings from published research on sleep deprivation and presented 50+ people at project showcase",
+      "link":"https://glyjtha.github.io/dsc106_final_project/new_main.html"
+    },
+    {
       "title": "Blue Dot Project",
       "year": "2024",
       "place": "Independent Research",
       "alt": "Rumination and LCNE",
       "description": "Summarized neurobiological models of rumination and LC-NE system. Conducted EDA and analyzed Neuro Turing machine outputs.",
       "link": "https://github.com/KevinBian107/Blue-Dot-Project"
+    },
+    {
+      "title": "Accent Recognition",
+      "year": "2024",
+      "place": "Neuromatch Academy",
+      "alt": "Deep Learning Accent Recognition",
+      "description": "Designed an efficient tensor conversion pipeline, optimizing data preprocessing to improve model performance and reduce latency. Developed and presented a project on Accent Recognition using Wav2Vec2, focusing on converting datasets into tensors for model training.",
+      "link": "https://docs.google.com/presentation/d/1NNXvMrUmop55uNbUFk2VQMhE9tD_eXuGsG24O1TZRpw/edit#slide=id.p"
     },
     {
       "title": "Simpsons PCA Face Reconstruction",
@@ -44,12 +59,12 @@
       "description": "Designed surveys on AI trust and performance. Applied ML models and reinforcement learning frameworks for behavioral prediction."
     },
     {
-      "title": "Accent Recognition",
-      "year": "2024",
-      "place": "Neuromatch Academy",
-      "alt": "Deep Learning Accent Recognition",
-      "description": "Designed an efficient tensor conversion pipeline, optimizing data preprocessing to improve model performance and reduce latency. Developed and presented a project on Accent Recognition using Wav2Vec2, focusing on converting datasets into tensors for model training.",
-      "link": "https://docs.google.com/presentation/d/1NNXvMrUmop55uNbUFk2VQMhE9tD_eXuGsG24O1TZRpw/edit#slide=id.p"
+      "title": "Bikewatching",
+      "year": "2025",
+      "place": "N/A",
+      "alt": "Bikewatching visulization",
+      "description": "Built an immersive, interactive map visualization of bike traffic in the Boston area during different times of the day",
+      "link":"https://ivvvvvvvy123.github.io/bikewatching/"
     },
     {
       "title": "Language differentiation",
@@ -63,8 +78,7 @@
       "year": "2023",
       "place": "UCSD Triton NeuroTech club",
       "alt": "EEG data",
-      "description": "Tried to decode data from a BCI device Muse and organize project meetings with 4 peers weekly",
-      "link":"https://github.com/ivvvvvvvy123/Amusing"
+      "description": "Tried to decode data from a BCI device Muse and organize project meetings with 4 peers weekly"
     },
     {
       "title": "Rats Forced Swim Test",
@@ -74,25 +88,10 @@
       "description": "Recorded and processed data by observing rats Forced Swim Test videos. Read papers about Forced Swim Test on rats and made writing summary"
     },
     {
-      "title": "Bikewatching",
-      "year": "2025",
-      "place": "N/A",
-      "alt": "Bikewatching visulization",
-      "description": "Built an immersive, interactive map visualization of bike traffic in the Boston area during different times of the day",
-      "link":"https://ivvvvvvvy123.github.io/bikewatching/"
-    },
-    {
       "title": "Rats body feature pattern demonstration",
       "year": "2025",
       "alt": "TBD",
       "description": "How do circadian rhythms and estrus cycles differently influence activity and temperature patterns in male and female mice? "
-    },
-    {
-      "title": "Effects of 24 Hours Sleep deprivation on cognitive mental health",
-      "year": "2025",
-      "alt": "TBD",
-      "description": "Built an interactive website using D3.js, HTML, CSS and JavaScript to visualize findings from published research on sleep deprivation and presented 50+ people at project showcase",
-      "link":"https://glyjtha.github.io/dsc106_final_project/new_main.html"
     }
   ]
   
