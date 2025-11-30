@@ -7,6 +7,13 @@
       "description": "Explored the relationship between sleep quality, psychological disorders, and the gut microbiome using QIIME, RPCA, Qurro, and random forest models. Built pipelines with Birdman and Qadabra for robust ML analysis."
     },
     {
+      "title": "Genotype–Phenotype Integration Project",
+      "year": "2025",
+      "place": "Palmer Lab, UC San Diego",
+      "description": "Analyzed ~2,000 rat genotype–phenotype pairs using Python, R, and HPC clusters, processing over 245K SNPs for genome-wide association analysis.",
+      "link": "https://docs.google.com/presentation/d/1fKUkvOhfichny1u1WjutFg9mAWsWwrmTwuxyZYUJg_0/edit?slide=id.g372ab42eeb9_0_892#slide=id.g372ab42eeb9_0_892"
+    },
+    {
       "title": "Recipe Time Estimation",
       "year": "2024",
       "place": "UC San Diego",
