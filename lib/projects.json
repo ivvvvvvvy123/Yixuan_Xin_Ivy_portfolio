@@ -1,97 +1,103 @@
 [
-    {
-      "title": "Sleep-Gut Microbiome Analysis",
-      "year": "2024",
-      "place": "Knight Lab, UC San Diego",
-      "alt": "Sleep and gut microbiome",
-      "description": "Explored the relationship between sleep quality, psychological disorders, and the gut microbiome using QIIME, RPCA, Qurro, and random forest models. Built pipelines with Birdman and Qadabra for robust ML analysis."
-    },
-    {
-      "title": "Genotype–Phenotype Integration Project",
-      "year": "2025",
-      "place": "Palmer Lab, UC San Diego",
-      "description": "Analyzed ~2,000 rat genotype–phenotype pairs using Python, R, and HPC clusters, processing over 245K SNPs for genome-wide association analysis.",
-      "link": "https://docs.google.com/presentation/d/1fKUkvOhfichny1u1WjutFg9mAWsWwrmTwuxyZYUJg_0/edit?slide=id.g372ab42eeb9_0_892#slide=id.g372ab42eeb9_0_892"
-    },
-    {
-      "title": "Recipe Time Estimation",
-      "year": "2024",
-      "place": "UC San Diego",
-      "alt": "Recipe model",
-      "description": "Performed hypothesis testing and built a decision tree model to predict recipe cooking time. Focused on model interpretability and fairness metrics.",
-      "link": "https://github.com/ivvvvvvvy123/recipe_satisfaction"
-    },
-    {
-      "title": "Effects of 24 Hours Sleep deprivation on cognitive mental health",
-      "year": "2025",
-      "alt": "TBD",
-      "description": "Built an interactive website using D3.js, HTML, CSS and JavaScript to visualize findings from published research on sleep deprivation and presented 50+ people at project showcase",
-      "link":"https://glyjtha.github.io/dsc106_final_project/new_main.html"
-    },
-    {
-      "title": "Blue Dot Project",
-      "year": "2024",
-      "place": "Independent Research",
-      "alt": "Rumination and LCNE",
-      "description": "Summarized neurobiological models of rumination and LC-NE system. Conducted EDA and analyzed Neuro Turing machine outputs.",
-      "link": "https://github.com/KevinBian107/Blue-Dot-Project"
-    },
-    {
-      "title": "Accent Recognition",
-      "year": "2024",
-      "place": "Neuromatch Academy",
-      "alt": "Deep Learning Accent Recognition",
-      "description": "Designed an efficient tensor conversion pipeline, optimizing data preprocessing to improve model performance and reduce latency. Developed and presented a project on Accent Recognition using Wav2Vec2, focusing on converting datasets into tensors for model training.",
-      "link": "https://docs.google.com/presentation/d/1NNXvMrUmop55uNbUFk2VQMhE9tD_eXuGsG24O1TZRpw/edit#slide=id.p"
-    },
-    {
-      "title": "Simpsons PCA Face Reconstruction",
-      "year": "2024",
-      "place": "UC San Diego",
-      "description": "Applied PCA for feature extraction and image reconstruction using The Simpsons dataset. Presented results via slides and an edited video.",
-      "link": "https://github.com/mmzhang7/The-Simpsons-PCA-Reconstruction"
-    },
-    {
-      "title": "HCI Survey & AI Research",
-      "year": "2023",
-      "place": "Chinese Academy of Sciences",
-      "alt": "AI survey analysis",
-      "description": "Designed surveys on AI trust and performance. Applied ML models and reinforcement learning frameworks for behavioral prediction."
-    },
-    {
-      "title": "Bikewatching",
-      "year": "2025",
-      "place": "N/A",
-      "alt": "Bikewatching visulization",
-      "description": "Built an immersive, interactive map visualization of bike traffic in the Boston area during different times of the day",
-      "link":"https://ivvvvvvvy123.github.io/bikewatching/"
-    },
-    {
-      "title": "Language differentiation",
-      "year": "2025",
-      "place": "DSC140A(In class) project",
-      "alt": "Classification Model",
-      "description": "Built a Naive Bayes text classification model from scratch(using only Numpy and Pandas without external packages or libraries) to distinguish Spanish and French words. Did feature engineering on bigram and word-ending features, constructed a vocabulary based, vectorized words and computed log-probabilities for the robust predict.Achieved a 83% test accuracy."
-    },
-    {
-      "title": "Amusing BCI headband",
-      "year": "2023",
-      "place": "UCSD Triton NeuroTech club",
-      "alt": "EEG data",
-      "description": "Tried to decode data from a BCI device Muse and organize project meetings with 4 peers weekly"
-    },
-    {
-      "title": "Rats Forced Swim Test",
-      "year": "2023",
-      "place": "National Engineering Laboratory for Brain-inspired Intelligence Technology and Application",
-      "alt": "Rats video clips",
-      "description": "Recorded and processed data by observing rats Forced Swim Test videos. Read papers about Forced Swim Test on rats and made writing summary"
-    },
-    {
-      "title": "Rats body feature pattern demonstration",
-      "year": "2025",
-      "alt": "TBD",
-      "description": "How do circadian rhythms and estrus cycles differently influence activity and temperature patterns in male and female mice? "
-    }
-  ]
-  
+  {
+    "title": "Verifiable Text-to-SQL Agent for Open-Source Trends",
+    "year": "2026",
+    "place": "Harvard AC215 (MLOps) Project",
+    "alt": "Text-to-SQL LLM agent",
+    "description": "Building an LLM agent in a rule-based harness that turns natural-language questions into validated SQL over GitHub, Hacker News, and PyPI data, with data-quality safeguards and a 100+ question execution-based benchmark comparing a LoRA-fine-tuned Qwen3 model against a hosted-LLM baseline. Deployed on GCP with Docker, Kubernetes, and CI/CD."
+  },
+  {
+    "title": "Accent Recognition with Wav2Vec2 (PyTorch)",
+    "year": "2024",
+    "place": "Neuromatch Academy — Deep Learning",
+    "alt": "Deep Learning Accent Recognition",
+    "description": "A PyTorch deep-learning project from Neuromatch Academy: fine-tuned the Wav2Vec2 speech model to recognize English accents, and built a tensor-conversion pipeline that turns raw audio datasets into model-ready inputs, speeding up preprocessing for training.",
+    "link": "https://docs.google.com/presentation/d/1NNXvMrUmop55uNbUFk2VQMhE9tD_eXuGsG24O1TZRpw/edit#slide=id.p"
+  },
+  {
+    "title": "Sleep-Gut Microbiome Analysis",
+    "year": "2024",
+    "place": "Knight Lab, UC San Diego",
+    "alt": "Sleep and gut microbiome",
+    "description": "Built end-to-end Python pipelines harmonizing 12 sleep variables with high-dimensional sparse microbiome features for 5,200+ samples. Engineered features with log-ratio transforms and PCA, trained random-forest classifiers with SMOTE, and improved 5-fold CV accuracy from 27% to 71% (AUC = 0.78); used Bayesian variational inference to quantify uncertainty."
+  },
+  {
+    "title": "GWAS Pipeline Validation",
+    "year": "2025",
+    "place": "UCSD Health",
+    "description": "Validated a genome-wide association pipeline on ~2,000 legacy samples re-sequenced with a newer method, running 245K+ genetic variants on HPC clusters (Python, R). Applied R²-based validation and Liftover conversion to align genome assemblies, reaching >98% coordinate match accuracy across five reference versions.",
+    "link": "https://docs.google.com/presentation/d/1fKUkvOhfichny1u1WjutFg9mAWsWwrmTwuxyZYUJg_0/edit?slide=id.g372ab42eeb9_0_892#slide=id.g372ab42eeb9_0_892"
+  },
+  {
+    "title": "Recipe Time Estimation",
+    "year": "2024",
+    "place": "UC San Diego",
+    "alt": "Recipe model",
+    "description": "Performed hypothesis testing and built a decision tree model to predict recipe cooking time. Focused on model interpretability and fairness metrics.",
+    "link": "https://github.com/ivvvvvvvy123/recipe_satisfaction"
+  },
+  {
+    "title": "Effects of 24 Hours Sleep deprivation on cognitive mental health",
+    "year": "2025",
+    "alt": "TBD",
+    "description": "Built an interactive website using D3.js, HTML, CSS and JavaScript to visualize findings from published research on sleep deprivation and presented 50+ people at project showcase",
+    "link": "https://glyjtha.github.io/dsc106_final_project/new_main.html"
+  },
+  {
+    "title": "Blue Dot Project",
+    "year": "2024",
+    "place": "Independent Research",
+    "alt": "Rumination and LCNE",
+    "description": "Summarized neurobiological models of rumination and LC-NE system. Conducted EDA and analyzed Neuro Turing machine outputs.",
+    "link": "https://github.com/KevinBian107/Blue-Dot-Project"
+  },
+  {
+    "title": "Simpsons PCA Face Reconstruction",
+    "year": "2024",
+    "place": "UC San Diego",
+    "description": "Applied PCA for feature extraction and image reconstruction using The Simpsons dataset. Presented results via slides and an edited video.",
+    "link": "https://github.com/mmzhang7/The-Simpsons-PCA-Reconstruction"
+  },
+  {
+    "title": "AI Teammate Evaluation & User Research",
+    "year": "2023",
+    "place": "Chinese Academy of Sciences — Institute of Automation",
+    "alt": "AI survey analysis",
+    "description": "Built a reusable pandas workflow for data cleaning, reliability testing (Cronbach's α = 0.83) and correlation analysis to find features driving user satisfaction in an AI-assisted strategy simulation. Redesigned the evaluation survey into an 11-dimension metric framework for AI teammates."
+  },
+  {
+    "title": "Bikewatching",
+    "year": "2025",
+    "place": "N/A",
+    "alt": "Bikewatching visulization",
+    "description": "Built an immersive, interactive map visualization of bike traffic in the Boston area during different times of the day",
+    "link": "https://ivvvvvvvy123.github.io/bikewatching/"
+  },
+  {
+    "title": "Language differentiation",
+    "year": "2025",
+    "place": "DSC140A(In class) project",
+    "alt": "Classification Model",
+    "description": "Built a Naive Bayes text classification model from scratch(using only Numpy and Pandas without external packages or libraries) to distinguish Spanish and French words. Did feature engineering on bigram and word-ending features, constructed a vocabulary based, vectorized words and computed log-probabilities for the robust predict.Achieved a 83% test accuracy."
+  },
+  {
+    "title": "Amusing BCI headband",
+    "year": "2023",
+    "place": "UCSD Triton NeuroTech club",
+    "alt": "EEG data",
+    "description": "Tried to decode data from a BCI device Muse and organize project meetings with 4 peers weekly"
+  },
+  {
+    "title": "Rats Forced Swim Test",
+    "year": "2023",
+    "place": "National Engineering Laboratory for Brain-inspired Intelligence Technology and Application",
+    "alt": "Rats video clips",
+    "description": "Recorded and processed data by observing rats Forced Swim Test videos. Read papers about Forced Swim Test on rats and made writing summary"
+  },
+  {
+    "title": "Rats body feature pattern demonstration",
+    "year": "2025",
+    "alt": "TBD",
+    "description": "How do circadian rhythms and estrus cycles differently influence activity and temperature patterns in male and female mice? "
+  }
+]

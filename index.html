@@ -5,18 +5,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yixuan Xin: Personal site and portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="global.js"></script>
-    <script src="index.js" type="module" defer></script>
-
-
-    
+    <script type="module" src="main.js"></script>
 </head>
 <body>
-    <h1>Yixuan Xin</h1>
-    <p>Hello! 👋 I'm a UCSD Cognitive Science student double major in Machine Learning and Neuroscience and minor in Data Science, and I'm interested in <strong>AI in healthcare and data science applications in bioinformatics.</strong> </p>
-    <img src="images/Ivy_self_pic.jpg" alt="Ivy Xin self picture" width="300">
-    
+<div class="layout">
 
+    <!-- ===== Sidebar table of contents ===== -->
+    <aside class="sidebar">
+        <a href="#home" class="sidebar-name">Yixuan (Ivy) Xin</a>
+        <nav class="toc" aria-label="Sections">
+            <a href="#home">Home</a>
+            <a href="#experience">CV &amp; Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#resume">Resume (PDF)</a>
+        </nav>
+        <label class="color-scheme">
+            Theme
+            <select id="color-scheme-select">
+                <option value="light dark">Automatic</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </label>
+    </aside>
 
+    <main>
+        <!-- ===== Home ===== -->
+        <section id="home">
+            <h1>Yixuan Xin</h1>
+            <div class="intro">
+                <img src="images/Ivy_self_pic.jpg" alt="Ivy Xin self picture" class="avatar">
+                <div>
+                    <p>Hello! 👋 I'm an M.S. in Health Data Science student at Harvard University. I received my B.S. in Cognitive Science (Machine Learning specialization) and Neuroscience from UC San Diego, and I'm interested in <strong>applied ML and data science applications in healthcare</strong>.</p>
+                    <div class="social">
+                        <a href="https://github.com/ivvvvvvvy123" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+                            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ivyxin327" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.13 2.06 2.06 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CV & Experience ===== -->
+        <section id="experience">
+            <h2>CV &amp; Experience</h2>
+
+            <h3 class="subhead">Education</h3>
+            <article>
+                <h4>Harvard University <span class="when">Expected Dec. 2027 | Boston, MA</span></h4>
+                <p><em>M.S. in Health Data Science</em></p>
+                <p><strong>Courses:</strong> Advanced Practical Data Science (MLOps), Statistical Inference, AI in Operations, Computing for Big Data</p>
+            </article>
+            <article>
+                <h4>University of California, San Diego <span class="when">Aug. 2022 – Jun. 2026 | San Diego, CA</span></h4>
+                <p><em>B.S. in Cognitive Science (Machine Learning specialization) and Neuroscience</em> · GPA 3.91/4.0</p>
+                <p><strong>Honors:</strong> Halıcıoğlu Data Science Institute (HDSI) Undergraduate Scholarship; 4 years UCSD Provost Honors</p>
+            </article>
+
+            <h3 class="subhead">Experience</h3>
+            <article>
+                <h4><a class="org" href="https://knightlab.ucsd.edu/" target="_blank" rel="noopener">Knight Lab</a> <span class="when">Jun. 2024 – Jun. 2026 | La Jolla, CA</span></h4>
+                <p><em>Data Science Research Assistant</em></p>
+                <ul>
+                    <li>Built end-to-end Python pipelines to clean, merge, and harmonize 12 sleep variables with high-dimensional sparse features for 5,200+ samples; ran EDA to flag missingness and distribution shifts.</li>
+                    <li>Engineered features from sparse compositional data using log-ratio transforms and PCA; trained random-forest classifiers to predict sleep, using SMOTE to correct severe class imbalance.</li>
+                    <li>Evaluated models with 5-fold cross-validation, improving accuracy from 27% to 71% (AUC = 0.78); applied Bayesian variational inference to quantify uncertainty, showing features explained 18%+ of outcome variance.</li>
+                </ul>
+            </article>
+            <article>
+                <h4><a class="org" href="https://docs.google.com/presentation/d/1fKUkvOhfichny1u1WjutFg9mAWsWwrmTwuxyZYUJg_0/edit?slide=id.g372ab42eeb9_0_892#slide=id.g372ab42eeb9_0_892" target="_blank" rel="noopener" title="Project presentation">UCSD Health</a> <span class="when">May 2025 – Aug. 2025 | San Diego, CA</span></h4>
+                <p><em>Bioinformatics Technician Intern</em></p>
+                <ul>
+                    <li>Validated a previous genome-wide association pipeline on ~2,000 legacy samples re-sequenced with a newer method, running 245K+ genetic variants on HPC clusters (Python, R) to test whether results held on new data.</li>
+                    <li>Applied R²-based validation and Liftover conversion to align multiple genome assemblies, achieving &gt;98% coordinate match accuracy across five reference versions.</li>
+                    <li>Investigated missing inputs and version-related pipeline failures with tool developers and lab researchers, communicating root causes and validation results to support reproducible reruns.</li>
+                </ul>
+            </article>
+            <article>
+                <h4><a class="org" href="http://english.ia.cas.cn/" target="_blank" rel="noopener">Chinese Academy of Sciences (CAS) — Institute of Automation</a> <span class="when">Jun. 2023 – Sep. 2023 | Beijing, China</span></h4>
+                <p><em>Intelligent Systems and Engineering Research Center Intern</em></p>
+                <ul>
+                    <li>Built a reusable pandas-based analysis workflow covering data cleaning, reliability testing (Cronbach's α = 0.83), and correlation analysis to identify product features driving user satisfaction in an AI-assisted strategy simulation.</li>
+                    <li>Translated findings into prioritized recommendations for the dev team: flagged replay as the lowest-rated, most divisive feature (3.1/5), surfaced 87% user demand for formation and speed controls, and categorized AI-agent bugs.</li>
+                    <li>Redesigned the evaluation survey into an 11-dimension metric framework for AI teammates (decision quality, adaptability), synthesized 30+ studies, and revised inconsistent scales and conditional follow-ups for future testing.</li>
+                </ul>
+            </article>
+
+            <h3 class="subhead">Featured Projects</h3>
+            <article>
+                <h4>Verifiable Text-to-SQL Agent for Open-Source Trends <span class="when">Sep. 2026 – Present</span></h4>
+                <p><em>Harvard AC215 (MLOps) Project</em></p>
+                <ul>
+                    <li>Building an LLM agent in a rule-based harness that turns natural-language questions into validated SQL over GitHub, Hacker News, and PyPI data, asking for clarification or refusing when the data cannot support an answer.</li>
+                    <li>Designing data-quality safeguards for multi-source event data, including a registry of known metric-definition breaks, anomaly flags for star bursts, and source and freshness tracking on every stored value.</li>
+                    <li>Developing a 100+ question execution-based benchmark to compare a LoRA-fine-tuned Qwen3 model against a hosted-LLM baseline, with deployment on GCP using Docker, Kubernetes, and CI/CD.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h4><a class="org" href="https://docs.google.com/presentation/d/1NNXvMrUmop55uNbUFk2VQMhE9tD_eXuGsG24O1TZRpw/edit#slide=id.p" target="_blank" rel="noopener">Accent Recognition with Wav2Vec2</a> <span class="when">Jun. 2024 – Aug. 2024</span></h4>
+                <p><em>Neuromatch Academy — Deep Learning course project (PyTorch)</em></p>
+                <ul>
+                    <li>Completed a 128-hour Deep Learning course covering NLP, generative models, reinforcement learning, and interpretability.</li>
+                    <li>Built a PyTorch project that fine-tunes Wav2Vec2 to recognize English accents, including a tensor-conversion pipeline that turns raw audio datasets into model-ready inputs.</li>
+                </ul>
+            </article>
+
+            <h3 class="subhead">Leadership</h3>
+            <article>
+                <h4>Lumnus Consulting Junior Enterprise <span class="when">Sep. 2022 – Dec. 2022 | San Diego, CA</span></h4>
+                <p><em>Student Consultant</em></p>
+                <ul>
+                    <li>Led a 4-person team in analyzing renewable-energy market trends and competitive positioning, delivering an 18-page strategy report with growth recommendations for non-technical stakeholders.</li>
+                </ul>
+            </article>
+
+            <h3 class="subhead">Technical Skills</h3>
+            <ul>
+                <li><strong>Programming:</strong> Python (Pandas, NumPy), SQL, R, Bash</li>
+                <li><strong>Machine Learning &amp; Statistics:</strong> PyTorch, scikit-learn, NLP, ensemble methods, A/B testing, causal inference</li>
+                <li><strong>Platforms &amp; Tools:</strong> Docker, GCP, AWS, Git/GitHub, Linux/Unix, Tableau, D3.js</li>
+                <li><strong>Personal Interests:</strong> Frisbee, Skiing, Hiking, Japanese (1111-day Duolingo streak), Rock Climbing</li>
+            </ul>
+        </section>
+
+        <!-- ===== Projects ===== -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="chart-container">
+                <svg id="projects-plot"></svg>
+                <ul class="legend"></ul>
+            </div>
+            <input class="searchBar" type="search" aria-label="Search projects" placeholder="🔍 Search projects…">
+            <p id="project-count"></p>
+            <div class="projects"></div>
+        </section>
+
+        <!-- ===== Resume ===== -->
+        <section id="resume">
+            <h2>Preview Resume in PDF</h2>
+            <p><a class="button" href="resume.pdf" target="_blank" rel="noopener" download>⬇ Download Resume (PDF)</a></p>
+            <object id="resume-embed" data="resume.pdf" type="application/pdf" aria-label="Resume PDF">
+                <p class="muted">The resume PDF will appear here once <code>resume.pdf</code> is added to the site.</p>
+            </object>
+        </section>
+    </main>
+</div>
 </body>
 </html>
