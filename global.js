@@ -16,15 +16,20 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
   const article = document.createElement('article');
   article.className = 'project-card';
 
-  const titleHTML = `<${headingLevel} class="project-title">${project.title || ''}</${headingLevel}>`;
-  const placeHTML = project.place ? `<p class="project-meta">${project.place}</p>` : '';
-  const descriptionHTML = `<p class="project-description">${project.description || ''}</p>`;
-  const yearHTML = project.year ? `<p class="project-meta"><strong>Year:</strong> ${project.year}</p>` : '';
-  const linkHTML = project.link
-    ? `<p><a href="${project.link}" target="_blank" rel="noopener" class="project-link">View Project</a></p>`
-    : '';
+  // Title itself is the link (no separate "View Project" button)
+  const title = project.link
+    ? `<a href="${project.link}" target="_blank" rel="noopener">${project.title || ''}</a>`
+    : (project.title || '');
 
-  article.innerHTML = `${titleHTML}${placeHTML}${descriptionHTML}${yearHTML}${linkHTML}`;
+  article.innerHTML = `
+    <div class="project-side">
+      ${project.year ? `<span class="project-year">${project.year}</span>` : ''}
+      ${project.place ? `<p class="project-meta">${project.place}</p>` : ''}
+    </div>
+    <div class="project-main">
+      <${headingLevel} class="project-title${project.link ? ' has-link' : ''}">${title}</${headingLevel}>
+      <p class="project-description">${project.description || ''}</p>
+    </div>`;
   containerElement.appendChild(article);
 }
 

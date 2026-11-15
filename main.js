@@ -1,4 +1,5 @@
 import { fetchJSON, renderProjects } from './global.js';
+import './ivy.js';
 import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
 
 /* ---------- Theme selector ---------- */
@@ -62,7 +63,7 @@ function renderPieChart() {
     .map(([label, value]) => ({ label, value }));
   if (selectedYear !== null && !data.some((d) => d.label === selectedYear)) selectedYear = null;
 
-  const palette = ['#0EA5E9', '#2563EB', '#06B6D4', '#60A5FA', '#1E40AF', '#7DD3FC'];
+  const palette = ['#5DB7E8', '#A99BE0', '#86C5A4', '#F2B880', '#E79AB4', '#7F9CDB'];
   const colors = d3.scaleOrdinal(palette).domain(data.map((d) => d.label));
   const radius = 75;
   const arc = d3.arc().innerRadius(0).outerRadius(radius - 5);
