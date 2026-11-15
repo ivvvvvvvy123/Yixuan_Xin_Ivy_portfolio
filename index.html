@@ -16,7 +16,7 @@
     <svg class="vines" id="vines" aria-hidden="true"></svg>
     <div class="hero-text">
         <p class="hero-kicker">Data Science · Machine Learning</p>
-        <h1 class="hero-title">Hi, I’m Ivy.</h1>
+        <h1 class="hero-title">Hello👋, I’m Ivy.</h1>
         <p class="hero-sub">I turn data into products and decisions that work for real people.</p>
         <p class="hero-typed">Working on <span id="typed"></span><span class="caret" aria-hidden="true">|</span></p>
     </div>
@@ -37,6 +37,7 @@
             <a href="#home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Home</a>
             <a href="#experience"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg>CV &amp; Experience</a>
             <a href="#projects"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m10 12-2 2 2 2M14 12l2 2-2 2"/></svg>Projects</a>
+            <a href="#interests"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>Interests</a>
             <a href="#resume"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>Resume (PDF)</a>
         </nav>
         <label class="color-scheme">
@@ -74,44 +75,62 @@
             <h2>CV &amp; Experience</h2>
 
             <h3 class="subhead">Education</h3>
-            <article>
+            <article class="entry">
+                <img class="org-logo" src="images/logos/harvard.png" alt="Harvard University logo" loading="lazy">
+                <div class="entry-body">
                 <h4>Harvard University <span class="when">Expected Dec. 2027 | Boston, MA</span></h4>
-                <p><em>M.S. in Health Data Science</em></p>
+                <p class="role">M.S. in Health Data Science</p>
                 <p><strong>Courses:</strong> Advanced Practical Data Science (MLOps), Statistical Inference, AI in Operations, Computing for Big Data</p>
+            </div>
             </article>
-            <article>
+            <article class="entry">
+                <img class="org-logo" src="images/logos/ucsd.png" alt="UC San Diego logo" loading="lazy">
+                <div class="entry-body">
                 <h4>University of California, San Diego <span class="when">Aug. 2022 – Jun. 2026 | San Diego, CA</span></h4>
-                <p><em>B.S. in Cognitive Science (Machine Learning specialization) and Neuroscience</em> · GPA 3.91/4.0</p>
+                <p class="role">B.S. in Cognitive Science (Machine Learning specialization) and Neuroscience <span class="gpa">GPA 3.91/4.0</span></p>
                 <p><strong>Honors:</strong> Halıcıoğlu Data Science Institute (HDSI) Undergraduate Scholarship; 4 years UCSD Provost Honors</p>
+            </div>
             </article>
 
             <h3 class="subhead">Experience</h3>
-            <article>
+            <article class="entry">
+                <img class="org-logo" src="images/logos/knightlab.png" alt="Knight Lab logo" loading="lazy">
+                <div class="entry-body">
                 <h4><a class="org" href="https://knightlab.ucsd.edu/" target="_blank" rel="noopener">Knight Lab</a> <span class="when">Jun. 2024 – Jun. 2026 | La Jolla, CA</span></h4>
-                <p><em>Data Science Research Assistant</em></p>
+                <p class="org-blurb">A microbiome research lab at UC San Diego · gut microbiome · multi-omics · machine learning · open-source tools (QIIME 2)</p>
+                <p class="role">Data Science Research Assistant</p>
                 <ul>
                     <li>Built end-to-end Python pipelines to clean, merge, and harmonize 12 sleep variables with high-dimensional sparse features for 5,200+ samples; ran EDA to flag missingness and distribution shifts.</li>
                     <li>Engineered features from sparse compositional data using log-ratio transforms and PCA; trained random-forest classifiers to predict sleep, using SMOTE to correct severe class imbalance.</li>
                     <li>Evaluated models with 5-fold cross-validation, improving accuracy from 27% to 71% (AUC = 0.78); applied Bayesian variational inference to quantify uncertainty, showing features explained 18%+ of outcome variance.</li>
                 </ul>
+            </div>
             </article>
-            <article>
+            <article class="entry">
+                <img class="org-logo" src="images/logos/ucsd-health.png" alt="UC San Diego Health logo" loading="lazy">
+                <div class="entry-body">
                 <h4><a class="org" href="https://docs.google.com/presentation/d/1fKUkvOhfichny1u1WjutFg9mAWsWwrmTwuxyZYUJg_0/edit?slide=id.g372ab42eeb9_0_892#slide=id.g372ab42eeb9_0_892" target="_blank" rel="noopener" title="Project presentation">UCSD Health</a> <span class="when">May 2025 – Aug. 2025 | San Diego, CA</span></h4>
-                <p><em>Bioinformatics Technician Intern</em></p>
+                <p class="org-blurb">UC San Diego’s academic health system · patient care · biomedical research · genomics</p>
+                <p class="role">Bioinformatics Technician Intern</p>
                 <ul>
                     <li>Validated a previous genome-wide association pipeline on ~2,000 legacy samples re-sequenced with a newer method, running 245K+ genetic variants on HPC clusters (Python, R) to test whether results held on new data.</li>
                     <li>Applied R²-based validation and Liftover conversion to align multiple genome assemblies, achieving &gt;98% coordinate match accuracy across five reference versions.</li>
                     <li>Investigated missing inputs and version-related pipeline failures with tool developers and lab researchers, communicating root causes and validation results to support reproducible reruns.</li>
                 </ul>
+            </div>
             </article>
-            <article>
+            <article class="entry">
+                <img class="org-logo" src="images/logos/cas.png" alt="Chinese Academy of Sciences logo" loading="lazy">
+                <div class="entry-body">
                 <h4><a class="org" href="http://english.ia.cas.cn/" target="_blank" rel="noopener">Chinese Academy of Sciences (CAS) — Institute of Automation</a> <span class="when">Jun. 2023 – Sep. 2023 | Beijing, China</span></h4>
-                <p><em>Intelligent Systems and Engineering Research Center Intern</em></p>
+                <p class="org-blurb">China’s national research institute for AI · artificial intelligence · intelligent systems · human–AI interaction</p>
+                <p class="role">Intelligent Systems and Engineering Research Center Intern</p>
                 <ul>
                     <li>Built a reusable pandas-based analysis workflow covering data cleaning, reliability testing (Cronbach's α = 0.83), and correlation analysis to identify product features driving user satisfaction in an AI-assisted strategy simulation.</li>
                     <li>Translated findings into prioritized recommendations for the dev team: flagged replay as the lowest-rated, most divisive feature (3.1/5), surfaced 87% user demand for formation and speed controls, and categorized AI-agent bugs.</li>
                     <li>Redesigned the evaluation survey into an 11-dimension metric framework for AI teammates (decision quality, adaptability), synthesized 30+ studies, and revised inconsistent scales and conditional follow-ups for future testing.</li>
                 </ul>
+            </div>
             </article>
 
             <h3 class="subhead">Featured Projects</h3>
@@ -137,7 +156,8 @@
             <h3 class="subhead">Leadership</h3>
             <article>
                 <h4>Lumnus Consulting Junior Enterprise <span class="when">Sep. 2022 – Dec. 2022 | San Diego, CA</span></h4>
-                <p><em>Student Consultant</em></p>
+                <p class="org-blurb">A student-run consulting organization at UC San Diego · strategy · market research</p>
+                <p class="role">Student Consultant</p>
                 <ul>
                     <li>Led a 4-person team in analyzing renewable-energy market trends and competitive positioning, delivering an 18-page strategy report with growth recommendations for non-technical stakeholders.</li>
                 </ul>
@@ -148,7 +168,6 @@
                 <li><strong>Programming:</strong> Python (Pandas, NumPy), SQL, R, Bash</li>
                 <li><strong>Machine Learning &amp; Statistics:</strong> PyTorch, scikit-learn, NLP, ensemble methods, A/B testing, causal inference</li>
                 <li><strong>Platforms &amp; Tools:</strong> Docker, GCP, AWS, Git/GitHub, Linux/Unix, Tableau, D3.js</li>
-                <li><strong>Personal Interests:</strong> Frisbee, Skiing, Hiking, Japanese (1111-day Duolingo streak), Rock Climbing</li>
             </ul>
         </section>
 
@@ -162,6 +181,20 @@
             <input class="searchBar" type="search" aria-label="Search projects" placeholder="🔍 Search projects…">
             <p id="project-count"></p>
             <div class="projects"></div>
+        </section>
+
+        <!-- ===== Interests ===== -->
+        <section id="interests">
+            <h2>Interests</h2>
+            <p class="muted">What I do when I’m not looking at data.</p>
+            <div class="interests">
+                <div class="interest"><span class="emoji" aria-hidden="true">🥏</span><h4>Ultimate Frisbee</h4><p>Playing with Harvard Ultimate Frisbee.</p></div>
+                <div class="interest"><span class="emoji" aria-hidden="true">🧗</span><h4>Rock Climbing</h4><p>Bouldering and working on new routes.</p></div>
+                <div class="interest"><span class="emoji" aria-hidden="true">⛷️</span><h4>Skiing</h4><p>Chasing snow every winter.</p></div>
+                <div class="interest"><span class="emoji" aria-hidden="true">🥾</span><h4>Hiking</h4><p>Trails, summits, and good views.</p></div>
+                <div class="interest"><span class="emoji" aria-hidden="true">✈️</span><h4>Traveling</h4><p>Exploring new cities, food, and cultures.</p></div>
+                <div class="interest"><span class="emoji" aria-hidden="true">🦉</span><h4>Japanese</h4><p>Learning on Duolingo — a <strong>1111-day streak</strong>.</p></div>
+            </div>
         </section>
 
         <!-- ===== Resume ===== -->
